@@ -1,0 +1,365 @@
+.menu-administrador {
+    margin: 5rem auto;
+}
+.menu-administrador__ul.consultor {
+    margin: auto;
+    padding: 0;
+    width: 800px;
+    text-align: center;
+}
+.menu-administrador__ul.consultor li {
+    display: inline-flex;
+}
+.menu-administrador__ul li {
+    display: flex;
+    width: 20.43rem;
+    height: 12.25rem;
+    background: var(--neutro700);
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease-in-out;
+    min-width: 20rem;
+}
+.menu-administrador__ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.year-indice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.year-indice__anio {
+    min-width: 4.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primario600);
+}
+.year-indice__boton {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primario600);
+    border-radius: 50%;
+    background: #FFF;
+    color: var(--primario600);
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.year-indice__boton:hover {
+    background: var(--primario600);
+    color: var(--neutro100);
+}
+.year-indice__boton:hover .bi {
+    color: var(--neutro100);
+}
+.year-indice__boton:disabled {
+    border-color: var(--neutro400);
+    color: var(--neutro500);
+    background: #FFF;
+    cursor: not-allowed;
+}
+.agenda__ul, .menu--estados__ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+.menu--estados__ul {
+    max-width: 1200px;
+}
+.menu-administrador__ul.sectores {
+    max-width: 1200px;
+}
+
+.menu-administrador__ul li {
+    width: calc(33.333% - 1.5rem); 
+    height: 12.25rem;
+    background: var(--neutro700);
+    border-radius: .5rem;
+    display: flex;
+    overflow: hidden;
+    transition: background 0.3s ease-in-out;
+}  
+.agenda__ul li, .menu--estados__ul li {
+    display: block;
+    width: calc(25% - 1.5rem); 
+    height: 12.25rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    background: var(--neutro700);
+    border-radius: .5rem;
+}
+.menu--estados__ul li {
+    width: calc(20% - 1.5rem); 
+}
+.agenda__ul li:has(a):hover {
+    background-color: red;
+}
+.agenda__a, .menu--estados__a {
+    height: 100%;
+    display: block;
+    background-image: url(../../img/ico-actividad.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom 3rem;
+    background-size: 3rem auto;
+    text-align: center;
+    padding: 2rem 0;
+}
+.menu--estados__a {
+    background-image: none;
+    color: #FFF;
+    text-decoration: none;
+}
+.menu--estados__icono {
+    display: block;
+    width: 100%;
+    height: 90%;
+    color: inherit;
+    background-color: currentColor;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+.aguascalientes .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/aguascalientes.svg);
+    mask-image: url(../../estados-mx/aguascalientes.svg);
+}
+.baja-california-sur .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/baja-california-sur.svg);
+    mask-image: url(../../estados-mx/baja-california-sur.svg);
+}
+.baja-california .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/baja-california.svg);
+    mask-image: url(../../estados-mx/baja-california.svg);
+}
+.campeche .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/campeche.svg);
+    mask-image: url(../../estados-mx/campeche.svg);
+}
+.chiapas .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/chiapas.svg);
+    mask-image: url(../../estados-mx/chiapas.svg);
+}
+.chihuahua .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/chihuahua.svg);
+    mask-image: url(../../estados-mx/chihuahua.svg);
+}
+.ciudad-de-mexico .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/ciudad-de-mexico.svg);
+    mask-image: url(../../estados-mx/ciudad-de-mexico.svg);
+}
+.coahuila .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/coahuila.svg);
+    mask-image: url(../../estados-mx/coahuila.svg);
+}
+.colima .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/colima.svg);
+    mask-image: url(../../estados-mx/colima.svg);
+}
+.durango .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/durango.svg);
+    mask-image: url(../../estados-mx/durango.svg);
+}
+.guanajuato .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/guanajuato.svg);
+    mask-image: url(../../estados-mx/guanajuato.svg);
+}
+.guerrero .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/guerrero.svg);
+    mask-image: url(../../estados-mx/guerrero.svg);
+}
+.hidalgo .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/hidalgo.svg);
+    mask-image: url(../../estados-mx/hidalgo.svg);
+}
+.jalisco .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/jalisco.svg);
+    mask-image: url(../../estados-mx/jalisco.svg);
+}
+.mexicoB .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/mexico.svg);
+    mask-image: url(../../estados-mx/mexico.svg);
+}
+.michoacan .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/michoacan.svg);
+    mask-image: url(../../estados-mx/michoacan.svg);
+}
+.morelos .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/morelos.svg);
+    mask-image: url(../../estados-mx/morelos.svg);
+}
+.nayarit .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/nayarit.svg);
+    mask-image: url(../../estados-mx/nayarit.svg);
+}
+.nuevo-leon .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/nuevo-leon.svg);
+    mask-image: url(../../estados-mx/nuevo-leon.svg);
+}
+.oaxaca .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/oaxaca.svg);
+    mask-image: url(../../estados-mx/oaxaca.svg);
+}
+.puebla .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/puebla.svg);
+    mask-image: url(../../estados-mx/puebla.svg);
+}
+.queretaro .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/queretaro.svg);
+    mask-image: url(../../estados-mx/queretaro.svg);
+}
+.quintana-roo .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/quintana-roo.svg);
+    mask-image: url(../../estados-mx/quintana-roo.svg);
+}
+.san-luis-potosi .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/san-luis-potosi.svg);
+    mask-image: url(../../estados-mx/san-luis-potosi.svg);
+}
+.sinaloa .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/sinaloa.svg);
+    mask-image: url(../../estados-mx/sinaloa.svg);
+}
+.sonora .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/sonora.svg);
+    mask-image: url(../../estados-mx/sonora.svg);
+}
+.tabasco .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/tabasco.svg);
+    mask-image: url(../../estados-mx/tabasco.svg);
+}
+.tamaulipas .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/tamaulipas.svg);
+    mask-image: url(../../estados-mx/tamaulipas.svg);
+}
+.tlaxcala .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/tlaxcala.svg);
+    mask-image: url(../../estados-mx/tlaxcala.svg);
+}
+.veracruz .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/veracruz.svg);
+    mask-image: url(../../estados-mx/veracruz.svg);
+}
+.yucatan .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/yucatan.svg);
+    mask-image: url(../../estados-mx/yucatan.svg);
+}
+.zacatecas .menu--estados__icono {
+    -webkit-mask-image: url(../../estados-mx/zacatecas.svg);
+    mask-image: url(../../estados-mx/zacatecas.svg);
+}
+.agenda__a--off {
+    background-image: url(../../img/ico-actividad-off.svg);
+}
+.agenda__a--off .agenda__titulo {
+    color: var(--neutro600);
+}
+.agenda__titulo {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.agenda__ul li:hover,
+.menu-administrador__ul li:hover,
+.menu--estados__ul li:hover {
+    background: linear-gradient(0deg, rgba(97, 18, 50, 1) 14%, rgba(157, 36, 73, 1) 73%, rgba(157, 36, 73, 1) 93%);
+}
+.agenda__ul li:has(.agenda__a--off):hover {
+    background: var(--neutro600);
+    cursor:not-allowed;
+}
+
+.menu-administrador__ul a {
+    font-weight: 300;
+    color: var(--neutro100);
+    text-decoration: none;
+    font-size: 1.5em;
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-administrador__icono,
+.menu-administrador__titulo,
+.agenda__titulo {
+    color: #FFF;
+}
+
+.menu-administrador__icono {
+    font-size: 5rem;
+}
+
+
+@media (max-width:767.9px) {
+    .menu-administrador {
+        margin: 3.1rem auto;
+        width: 100%;
+    }
+
+    .menu-administrador__ul {
+        padding: 0;
+    }
+
+    .menu-administrador__ul li {
+        width: 100%;
+        height: 7.59rem;
+    }
+
+    .menu-administrador__ul a {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: flex-start;
+        padding-left: 10%;
+        gap: 1rem;
+        font-size: 1.75em;
+    }
+    .menu-administrador__ul a img {
+        width: 5rem;
+    }
+    .menu-administrador__ul a {
+        align-items: center;
+    }
+    .menu-administrador__ul span {
+        text-align: left;
+    }
+    .agenda__ul {
+        gap: .5rem;
+    }
+    .agenda__ul li {
+        width: 31%;
+    }
+    .agenda__titulo {
+        font-size: 1rem;
+        font-weight: 400 !important;
+    }
+    .menu--estados__ul li {
+        width: calc(33% - 1.5rem); 
+    }
+    .menu--estados__a .agenda__titulo {
+        font-size: 75%;
+    }
+}

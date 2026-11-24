@@ -1,0 +1,91 @@
+/*PROYECTOS BUSCA - tablero*/
+.proyectos { display:grid;}
+.proyectos__tit { grid-area:proyectos__tit;}
+.proyectos__sectores { grid-area:proyectos__sectores;}
+.proyectos__buscar  { grid-area:proyectos__buscar;} 
+.proyectos__botonera { grid-area:proyectos__botonera; margin:0; row-gap:1rem;}
+
+@media (min-width:1200px) {
+    .proyectos { grid-template-areas: 
+     "proyectos__tit proyectos__sectores"
+    "proyectos__buscar proyectos__botonera";
+    grid-template-columns:auto 35%}
+    .proyectos__tit, 
+    .proyectos__sectores {  border-bottom:solid 1px var(--neutro400); padding-bottom:2rem; margin-bottom:2rem;  }
+    .proyectos__buscar { width:70%}
+    .proyectos__botonera { align-items:end;}
+    
+}
+@media (max-width:1199px) {
+    .proyectos { grid-template-areas: 
+    "proyectos__tit"
+    "proyectos__botonera"
+    "proyectos__sectores"
+    "proyectos__buscar"}
+
+    .proyectos__tit { border-bottom:solid 1px var(--neutro400); padding-bottom:1rem; margin-bottom:1.5rem;  }
+    .proyectos__sectores,
+    .proyectos__botonera { border-bottom:solid 1px var(--neutro400); padding-bottom:2rem; margin-bottom:2rem;  }
+    .proyectos__buscar > div { flex-direction:column;}
+    
+
+}
+
+
+/*PROYECTO RESÚMEN*/
+.resumenProy { align-items:start; padding-bottom:24px;}
+.resumenProy1 { align-items:start; padding-bottom:24px;}
+/*datos*/
+.resumenProy__data { display:flex; gap:24px; flex-direction:column; font-weight: 300;}
+.resumenProy__data h3 { margin-top: 1.5rem; margin-bottom: 1.5rem; font-size: 160%;}
+.resumenProy__data dd { margin-bottom: 1rem;}
+.resumenProy__datatit { font-weight:bold; font-size:2.5rem; }
+.resumenProy__ul { list-style-type:none; margin:0; padding:0; column-count:2; display:grid; gap:24px; grid-template-columns:repeat(2, 1fr); }
+.fila--mix-3-9.resumenProy .resumenProy__ul { grid-template-columns:repeat(3, 1fr); }
+.resumenProy__ul.actividad { grid-template-columns:repeat(3, 1fr); }
+.resumenProy__datatit,
+.resumenProy__ul { border-bottom:solid 1px #CCC; padding-bottom:24px;}
+.resumenProy__li strong { display:block;}
+/*avance*/
+.resumenProy__avance { text-align: center; border:solid 1px var(--neutro400); border-radius:8px; padding:48px 24px; }
+.resumenFichaContacto { border-radius:8px; padding:24px; background-color: var(--neutro300); } 
+.resumenFichaContacto h3, .resumenFichaContacto dt { font-weight: 600;}
+.resumenFichaContacto dd { font-weight: 300; overflow: hidden;}
+.resumenProy__avancetit { font-size:1.5rem; font-weight:bold; margin-bottom:8px;}
+.resumenProy__estatus { font-size:1.5rem; display:flex;  align-items:center; gap:8px; margin:24px auto 0; justify-content: center;}
+.resumenProy__avance { background: var(--neutro300);}
+.resumenProy__avance p { text-align: left; margin: 0; font-size: 90%;}
+.fichaEtapa .resumenProy__estatus { justify-content: flex-start;}
+[class^="resumenProy__estatus--"] { font-size:.75rem; background:#EEE; padding:4px 12px; text-transform:uppercase; font-weight:bold; border-radius:4px;}
+.resumenProy__estatus--vencer { background-color:#FF9D00;  }
+.resumenProy__estatus--etapa { background-color: var(--primario500); color: var(--neutro100); width: fit-content;}
+.resumenProy__estatus--est { background-color: var(--neutro600); color: var(--neutro100); width: fit-content;}
+.resumenProy__estatus--ret { background-color: var(--false); color: var(--neutro100); width: fit-content;}
+.resumenProy__estatus--app { background-color: var(--exitoTxt); color: var(--neutro100); width: fit-content;}
+.resumenProy__estatus--rev { background-color: #235B4E; color: var(--neutro100); width: fit-content;}
+/*galeria*/
+.resumenProy__galeria { display:grid; gap:16px;}
+.resumenProy__fototxt { font-size:0.875rem; text-transform:uppercase; font-weight:600; color:var(--neutro700); margin-bottom:12px; display:block;}
+.resumenProy__fotoimg { width:100%; border-radius:8px;}
+.inicioFin { font-weight: 300; line-height: 90%; margin-bottom: .8rem;}
+.inicioFin strong { font-weight: 600;}
+.resumenProy .fichaEtapa { width: 14.5rem;}
+.fichaEtapa { width: 19.5rem; font-size: 90%;}
+.fichaEtapa h2 { margin: .3rem 0;}
+.fichaEtapa .boton__primario { padding: .3rem .5rem; font-size: 98%;}
+.reporte .cargaArchivos { margin: 1.5rem 0}
+.header-impreso { display: none;}
+@media (min-width:900px) { 
+    .resumenProy__avance { order:1;}
+    .resumenProy__data { order:2;}
+    .resumenProy__galeria { order:3;}
+}
+@media (max-width:899px) {
+    .resumenProy { grid-template-columns:1fr;}
+    .resumenProy .fichaEtapa { width: auto}
+}
+@media (max-width:650px) {
+    .fila--mix-3-9.resumenProy .resumenProy__ul,
+    .resumenProy__ul { grid-template-columns:repeat(1, 1fr); gap: 8px; }
+    .resumenProy__ul.actividad { grid-template-columns:repeat(1, 1fr); }
+}

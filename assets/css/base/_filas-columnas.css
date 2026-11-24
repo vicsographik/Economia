@@ -1,0 +1,114 @@
+[class^="fila"] { 
+    --filaColGap:1rem;
+    --filaRowGap:1.75rem;
+    display:grid; 
+    column-gap:var(--filaColGap); 
+    row-gap:var(--filaRowGap); 
+    align-items:end;
+    }
+
+    /*total, ceñir, ajustar, adaptar,   */
+    .fila--col2--resp,
+    .fila--col4--resp,
+    .fila--col8--resp
+    .fila--col10--resp {grid-template-columns:repeat(2,1fr)}
+    .fila--col3--resp,
+    .fila--col6--resp,
+    .fila--col9--resp {grid-template-columns:repeat(2,1fr)}
+    .fila--col--free {display: flex; flex-direction: row;}
+
+
+    /*MODIFICADORES*/
+    .fila--bordertop,
+    fieldset.fila--bordertop { border-top:solid 1px #CCC; padding-top:2rem;}
+    .fila--alignStart { align-items:start;}
+    .fila--linea > * { position:relative}
+    .fila--linea > *:not(:last-child)::after { content:""; border-right:1px solid #CCC; width:1px; height:100%; right:-.75rem; top: 0; position: absolute;}
+    .align-start { align-items: flex-start;}
+    
+@media (min-width:820px) {
+    /*COLUMNAS FIJAS*/
+    .fila--col1 {grid-template-columns:repeat(1,1fr)}
+    .fila--col2 {grid-template-columns:repeat(2,1fr)}
+    .fila--col3 {grid-template-columns:repeat(3,1fr)}
+    .fila--col4 {grid-template-columns:repeat(4,1fr)}
+    .fila--col5 {grid-template-columns:repeat(5,1fr)}
+    .fila--col6 {grid-template-columns:repeat(6,1fr)}
+    .fila--col7 {grid-template-columns:repeat(7,1fr)}
+    .fila--col8 {grid-template-columns:repeat(8,1fr)}
+    .fila--col9 {grid-template-columns:repeat(9,1fr)}
+    .fila--col10 {grid-template-columns:repeat(10,1fr)}
+    .fila--col11 {grid-template-columns:repeat(11,1fr)}
+    .fila--col12 {grid-template-columns:repeat(12,1fr)}
+
+    /*COLUMNAS COMBINADAS - 1 columna = 8.33% */
+    .fila--mix-3-3-6 { 
+        grid-template-columns:
+        calc( 24.6% - ( var(--filaColGap) * .5 ) ) /*1/2 rem*/
+        calc( 24.6% - ( var(--filaColGap) * .66 ) ) /*2/3 rem*/
+        1fr}
+
+    .fila--mix-3-6-3 { 
+        grid-template-columns:
+        calc( 24.6% - ( var(--filaColGap) * .5 ) ) /*1/2 rem*/
+        1fr 
+        calc( 24.6% - ( var(--filaColGap) * .5 ) ) /*2/3 rem*/
+    }
+    .fila--resumen { 
+        grid-template-columns:
+        calc( 24.6% - ( var(--filaColGap) * .5 ) ) /*1/2 rem*/
+        1fr 
+        calc( 24.6% - ( var(--filaColGap) * .5 ) ) /*2/3 rem*/
+    }
+    
+    .fila--mix-4-2-2-2-2 { 
+        grid-template-columns:
+        calc( 33.3% - ( var(--filaColGap) * .65 ) ) 
+        calc( 16.25% - ( var(--filaColGap) * .65 ) ) 
+        calc( 16.25% - ( var(--filaColGap) * .65 ) ) 
+        calc( 16.25% - ( var(--filaColGap) * .65 ) ) 
+        1fr}
+    .fila--mix-4-8 { 
+        grid-template-columns:
+        calc( 33.3% - ( var(--filaColGap) * .65 ) ) 
+        1fr}  
+    .fila--mix-3-9 { 
+        grid-template-columns:
+        calc( 25% - ( var(--filaColGap) * .65 ) ) 
+        1fr}        
+    .fila--mix-5-5-2 { 
+        grid-template-columns:
+        calc( 41.65% - ( var(--filaColGap) * .5 ) ) 
+        calc( 41.65% - ( var(--filaColGap) * .66 ) ) 
+        1fr}
+    .fila--mix-6-4-2 { 
+        grid-template-columns:
+        calc( 49.98% - ( var(--filaColGap) * .5 ) ) /*1/2 rem*/
+        calc( 33.32% - ( var(--filaColGap) * .66 ) ) /*2/3 rem*/
+        1fr}
+    .fila--mix-8-4 { 
+        grid-template-columns:
+        calc( 66.64% - ( var(--filaColGap) * .25 ) ) /*1/4 rem*/
+        1fr}   
+    .fila--mix-10-2 { 
+        grid-template-columns:
+        calc( 83.33% - ( var(--filaColGap) * .25 ) ) /*1/4 rem*/
+        1fr}
+    .fila--mix-11-1 { 
+        grid-template-columns:
+        calc( 91.6% - ( var(--filaColGap) * .25 ) ) /*1/4 rem*/
+        1fr} 
+    .fila--mix-5-7 { 
+        grid-template-columns:
+        calc( 41.65% - ( var(--filaColGap) * .5 ) ) /*1/4 rem*/
+        1fr}
+    .fila--upperTable {
+        align-items: start;
+    }
+}
+
+@media (max-width:767.9px) {
+    .fila { flex-direction:column;}
+    .fila--col2--resp { grid-template-columns: 1fr;}
+    .fila--linea > *:not(:last-child)::after { content: none;}
+}

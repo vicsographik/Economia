@@ -1,0 +1,342 @@
+/* Botón para agregar evento */
+.btn-agregar {
+    background-color: #537c99;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    font-family: 'Avenir', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-agregar:hover {
+    background-color: #3d5f75;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-agregar:active {
+    transform: translateY(0);
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 35px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 520px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease;
+    font-family: 'Avenir', sans-serif;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Botón cerrar (X) mejorado */
+.close {
+    color: #999;
+    float: right;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #537c99;
+    transform: rotate(90deg);
+}
+
+/* Título del modal mejorado */
+.modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 28px;
+    color: #2c3e50;
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 3px solid #537c99;
+    padding-bottom: 15px;
+}
+
+/* Estilos del Formulario */
+.form-group {
+    margin-bottom: 22px;
+}
+
+/* Etiquetas mejoradas */
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.form-group label::before {
+    content: "▸ ";
+    color: #537c99;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/* Inputs de texto mejorados */
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Avenir', sans-serif;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="text"]:hover,
+.form-group textarea:hover {
+    border-color: #537c99;
+    background-color: #ffffff;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #537c99;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(83, 124, 153, 0.1);
+}
+
+/* Inputs de fecha mejorados */
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Avenir', sans-serif;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: #333;
+}
+
+.form-group input[type="date"]:hover {
+    border-color: #537c99;
+    background-color: #ffffff;
+}
+
+.form-group input[type="date"]:focus {
+    outline: none;
+    border-color: #537c99;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(83, 124, 153, 0.1);
+}
+
+/* Estilizar el icono del calendario en el input */
+.form-group input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+    padding: 5px;
+    filter: opacity(0.6);
+    transition: all 0.3s ease;
+}
+
+.form-group input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    filter: opacity(1);
+    background-color: rgba(83, 124, 153, 0.1);
+}
+
+/* Textarea mejorado */
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* Botones del formulario mejorados */
+.form-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+
+.btn-guardar,
+.btn-cancelar {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Avenir', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-guardar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-guardar:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-cancelar {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-cancelar:hover {
+    background-color: #da190b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-guardar:active,
+.btn-cancelar:active {
+    transform: translateY(0);
+}
+/* Estilos para los botones del date picker */
+.flatpickr-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-top: 1px solid #e6e6e6;
+    background-color: #fff;
+}
+
+.flatpickr-clear-btn,
+.flatpickr-cancel-btn,
+.flatpickr-ok-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-family: 'Avenir', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.flatpickr-clear-btn {
+    color: #666;
+    margin-right: auto;
+}
+
+.flatpickr-clear-btn:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.flatpickr-cancel-btn {
+    color: #666;
+}
+
+.flatpickr-cancel-btn:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.flatpickr-ok-btn {
+    color: #537c99;
+    font-weight: 700;
+}
+
+.flatpickr-ok-btn:hover {
+    background-color: rgba(83, 124, 153, 0.1);
+}
+
+/* Ajustar el calendario para que tenga espacio para los botones */
+.flatpickr-calendar {
+    font-family: 'Avenir', sans-serif !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.flatpickr-day.selected {
+    background: #537c99 !important;
+    border-color: #537c99 !important;
+}
+
+.flatpickr-day.selected:hover {
+    background: #3d5f75 !important;
+    border-color: #3d5f75 !important;
+}
+
+.flatpickr-months .flatpickr-month {
+    background: #537c99 !important;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+    background: #537c99 !important;
+}
+
+
+/* Responsive: Ajustar en pantallas pequeñas */
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95%;
+        padding: 25px;
+        margin: 10% auto;
+    }
+    
+    .modal-content h2 {
+        font-size: 22px;
+    }
+    
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-guardar,
+    .btn-cancelar {
+        width: 100%;
+    }
+}

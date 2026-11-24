@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <title>SECCOR: Sistema de Sectores y Corredores</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DESCRIPCIÓN">
+    <meta name="keywords" content="PALABRAS CLAVE">
+    <meta property="og:title" content="SECCOR: Sistema de Sectores y Corredores">
+    <meta property="og:description" content="DESCRIPCIÓN">
+
+    <!-- LA RUTA DE LA IMAGEN OG:IMG DEBE SER ABSOLUTA  -->
+    <meta property="og:image" content="assets/img/OG-IMG.png">
+
+    <link rel="shortcut icon" href="https://www.gob.mx/resources/img/favicon.ico">
+    <!-- BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/seccor.css">
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="mexico">
+                <div class="mexico__contenedor">
+                    <div class="mexico__escudo">
+                        <a href="https://www.gob.mx/" class="mexico__aescudo">
+                            <img src="assets/img/gobierno-mexico.svg" class="mexico__img"
+                                alt="Ir a la página de inicio del Gobierno de México">
+                        </a>
+                    </div>
+                    <div class="mexico__menu">
+                        <details class="mexico__details" open>
+                            <summary class="mexico__summary">
+                                <span class="mexico__span">Páginas del Gobierno de México</span>
+                            </summary>
+                            <div class="mexico__detailsCont">
+                                <a href="https://www.gob.mx" class="mexico__a">Trámites</a>
+                                <a href="https://www.gob.mx/gobierno" class="mexico__a">Gobierno</a>
+                                <a href="https://www.gob.mx/busqueda" class="mexico__a" target="_blank" rel="noopener">
+                                    <span class="oculto">Ir a la página de búsqueda del Gobierno de México</span>
+                                    <img src="assets/icons-base/lupa.svg" alt="">
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="subheader">
+                <div class="subheader__contenedor">
+                    <div class="subheader__dependencia">
+                        ECONOMÍA
+                    </div>
+                    <!-- Aquí va el MENU cuando se necesite-->
+                    <!--nav class="subheader__nav">
+                        <details class="mexico__details" open>
+                            <summary class="mexico__summary subheader__navSummary">
+                                <span class="mexico__span">Menú</span>
+                            </summary>
+                            <div class="subheader__navCont">
+                                <ul class="subheader__navUl">
+                                    <li class="subheader__navLi"><a href="#" class="subheader__navLink">Opción 1</a></li>
+                                    <li class="subheader__navLi"><a href="#" class="subheader__navLink navLink--selected" aria-current="page">Opción 2 (seleccionada)</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </nav-->
+                </div>
+            </div>
+            <div class="seccor">
+                <div class="seccor__cont">
+
+                    <div class="seccor__marca">
+                        <span class="marca__logo"><span>SE</span>ccor</span>
+                        <span class="marca__pipe"></span>
+                        <span class="marca__nombre">Sistema de Sectores y Promotoras</span>
+                    </div>
+
+                    <div class="seccor__usr">
+                        <details class="seccor__details">
+                            <summary class="seccor__summary">
+                                <span class="seccor__summary1">
+                                    <span class="seccor__rol">Administrador</span>
+                                    <span class="seccor__nombre">Rodolfo Osorio de Carrera</span>
+                                </span>
+                                <span class="seccor__summary2">
+                                    <i aria-hidden="true" class="bi bi-person-circle seccor__usricon"></i>
+                                </span>
+                            </summary>
+                            <ul class="seccor__ul">
+                                <li class="seccor__li seccor__li--usr ">
+                                    <span class="seccor__rol seccor__rol--sm">Administrador</span>
+                                    <span class="seccor__nombre seccor__nombre--sm">Rodolfo Osorio de Carrera</span>
+                                </li>
+                                <li class="seccor__li"><a href="#" class="seccor__link">Cuenta de usuario</a></li>
+                                <li class="seccor__li"><button data-bs-toggle="modal"
+                                        data-bs-target="#modalCerrarSesion" class="seccor__link">Cerrar sesión</button>
+                                </li>
+                            </ul>
+
+                        </details>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="main">
+                <nav class="ruta" aria-label="Ruta de navegación">
+                    <ol class="ruta__ol">
+                        <li class="ruta__li"><a href="#" class="ruta__a"><i aria-hidden="true"
+                                    class="bi bi-house-door-fill"></i>
+                                Inicio
+                            </a></li>
+                        <li class="ruta__li" aria-current="page">Administración de Usuarios</li>
+                    </ol>
+                </nav>
+                <section class="mainHgroup--border ">
+                    <div class="mainHgroup__col1">
+                        <h1 class="mainHgroup__tit">Administración de Usuarios</h1>
+                    </div>
+                </section>
+                <div class="formulario">
+                    <div class="fila--col4">
+                        <div class="form__grupo">
+                            <label for="forma-01" class="form__label">
+                                Perfil
+                            </label>
+                            <select id="forma-01" class="form__control">
+                                <option>Selecciona una opción</option>
+                            </select>
+                        </div>
+                        <div class="form__grupo">
+                            <label for="forma-02" class="form__label">
+                                Estado
+                            </label>
+                            <select id="forma-02" class="form__control">
+                                <option>Selecciona una opción</option>
+                            </select>
+                        </div>
+                        <div class="form__grupo">
+                            <label for="forma-03" class="form__label">
+                                Estatus
+                            </label>
+                            <select id="forma-03" class="form__control">
+                                <option>Selecciona una opción</option>
+                            </select>
+                        </div>
+                        <div class="form__grupo">
+                            <label class="form__label label--normal">
+                                <input type="checkbox" class="form__checkbox">
+                                Seleccionar todos
+                            </label>
+                        </div>
+                    </div>
+                    <div class="fila--mix-3-3-6 fila--bordertop">
+                        <div class="form__grupo">
+                            <label for="forma-21" class="form__label">
+                                Búsqueda
+                            </label>
+                            <input type="text" id="forma-21" class="form__control"
+                                placeholder="Ingresa un criterio de búsqueda">
+                        </div>
+                        <div class="botonera--izq botonera--responsiva">
+                            <button class="boton__primario boton--100sm">Buscar</button>
+                            <button class="boton__secundario boton--100sm">Limpiar</button>
+                        </div>
+
+                        <div class="botonera--der botonera--responsiva">
+                            <button class="boton__secundario boton--100sm" data-bs-toggle="modal"
+                                                    data-bs-target="#modalPDFreport" disabled><i aria-hidden="true"
+                                    class="bi bi-file-earmark-pdf-fill"></i> Exportar información a PDF</button>
+                            <button class="boton__primario boton--100sm">Crear nuevo usuario</button>
+                        </div>
+                    </div>
+                    <div class="aviso aviso--exito aviso--center" role="status" aria-live="polite">
+                        La operación fué realizada con éxito.
+                    </div>
+                    <div class="aviso aviso--error aviso--center" role="alert" aria-live="assertive">
+                        Ocurrió un error inesperado, por favor inténtalo más tarde.
+                    </div>
+                    <div class="aviso aviso--error aviso--center" role="alert" aria-live="assertive"">
+                        No se pudo completar la operación, intenta nuevamente.
+                    </div>
+                    <div class=" aviso aviso--error aviso--center" role="alert" aria-live="assertive">
+                        La sesión ha expirado, por favor ingresa nuevamente.
+                    </div>
+                    <div class="aviso aviso--error aviso--center" role="alert" aria-live="assertive">
+                        No se encontraron resultados para tu búsqueda.
+                    </div>
+                    <section class="resultados">
+                        <h2 class="reusultados__tit">Resultados / Consulta de usuarios</h2>
+                        <p class="reusultados__total">Mostrando 1 de 10 de <strong>3100</strong> resultados</p>
+                        <div class="tabla__section tabla__consulta">
+                            <table class="tabla02 tabla--cebrada">
+
+                                <thead class="tabla02__thead">
+                                    <tr class="tabla02__theadTr">
+                                        <th scope="col" class="tabla02__theadTh">
+                                            #
+                                        </th>
+                                        <th scope="col" class="tabla02__theadTh">
+                                            Usuario
+                                        </th>
+                                        <th scope="col" class="tabla02__theadTh">
+                                            Nombre completo
+                                        </th>
+                                        <th scope="col" class="tabla02__theadTh">
+                                            Perfil
+                                        </th>
+                                        <th scope="col" class="tabla02__theadTh">
+                                            Estado
+                                        </th>
+                                        <th scope="col" class="tabla02__theadTh">
+                                            Estatus
+                                        </th>
+                                        <th scope="col" class="tabla02__theadTh th--center">
+                                            Acciones
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>1</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button disabled class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Desactivar" data-bs-toggle="modal"
+                                                    data-bs-target="#desactivarFail">
+                                                    <i aria-hidden="true" class="bi bi-x-circle-fill desactivar"></i>
+                                                    <span>Desactivar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>2</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Desactivar" data-bs-toggle="modal"
+                                                    data-bs-target="#desactivarUsuario">
+                                                    <i aria-hidden="true" class="bi bi-x-circle-fill desactivar"></i>
+                                                    <span>Desactivar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>3</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Desactivar" data-bs-toggle="modal"
+                                                    data-bs-target="#desactivarUsuario">
+                                                    <i aria-hidden="true" class="bi bi-x-circle-fill desactivar"></i>
+                                                    <span>Desactivar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>4</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Activar" data-bs-toggle="modal"
+                                                    data-bs-target="#activarUsuario">
+                                                    <i aria-hidden="true" class="bi bi-check-circle-fill activar"></i>
+                                                    <span>Activar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>5</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Activar" data-bs-toggle="modal"
+                                                    data-bs-target="#activarUsuario">
+                                                    <i aria-hidden="true" class="bi bi-check-circle-fill activar"></i>
+                                                    <span>Activar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>6</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Desactivar" data-bs-toggle="modal"
+                                                    data-bs-target="#desactivarUsuario">
+                                                    <i aria-hidden="true" class="bi bi-x-circle-fill desactivar"></i>
+                                                    <span>Desactivar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>7</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Activar" data-bs-toggle="modal"
+                                                    data-bs-target="#activarUsuario">
+                                                    <i aria-hidden="true" class="bi bi-check-circle-fill activar"></i>
+                                                    <span>Activar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>8</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Desactivar" data-bs-toggle="modal"
+                                                    data-bs-target="#desactivarUsuario">
+                                                    <i aria-hidden="true" class="bi bi-x-circle-fill desactivar"></i>
+                                                    <span>Desactivar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>9</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Activar" data-bs-toggle="modal"
+                                                    data-bs-target="#activarUsuario">
+                                                    <i aria-hidden="true" class="bi bi-check-circle-fill activar"></i>
+                                                    <span>Activar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tabla02__tbodyTr">
+                                        <td class="tabla02__tbodyTh"><strong>10</strong></td>
+                                        <td class="tabla02__tbodyTh">
+                                            correo@electronico.com
+                                        </td>
+                                        <td class="tabla02__tbodyTd">Luis Fernández Gómez</td>
+                                        <td class="tabla02__tbodyTd">Responsable de Sector</td>
+                                        <td class="tabla02__tbodyTd">Estado</td>
+                                        <td class="tabla02__tbodyTd">Activo</td>
+                                        <td class="tabla02__tbodyTd td--center tblProy__acc">
+                                            <div class="tabla02__acciones">
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Ver detalles" data-bs-toggle="modal"
+                                                    data-bs-target="#modalEditar">
+                                                    <i aria-hidden="true" class="bi bi-eye-fill"></i>
+                                                    <span>Ver detalles</span>
+                                                </button>
+                                                <button class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Actualizar" data-bs-toggle="modal"
+                                                    data-bs-target="#sincronizarInformacion">
+                                                    <i aria-hidden="true" class="bi bi-arrow-clockwise"></i>
+                                                    <span>Actualizar</span>
+                                                </button>
+                                                <a href="#" class="boton__primario--borde boton--iconoSm tooltip--top"
+                                                    data-tooltip="Desactivar" data-bs-toggle="modal"
+                                                    data-bs-target="#desactivarUsuario">
+                                                    <i aria-hidden="true" class="bi bi-x-circle-fill desactivar"></i>
+                                                    <span>Desactivar</span>
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <nav aria-label="Paginación de la tabla de usuarios">
+                                <ul class="paginacion paginacion--relleno">
+                                    <li><a href="#" class="paginacion__anterior">Anterior</a></li>
+                                    <li><a href="#" class="paginacion__pag">1</a></li>
+                                    <li><a href="#" class="paginacion__pag paginacion__pag--sel">2</a></li>
+                                    <li><a href="#" class="paginacion__pag">3</a></li>
+                                    <li><a href="#" class="paginacion__pag">4</a></li>
+                                    <li><a href="#" class="paginacion__pag">5</a></li>
+                                    <li><a href="#" class="paginacion__siguiente">Siguiente</a></li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="footer__contenedor">
+                <div class="footer__mexico">
+                    <img src="https://framework-gb.cdn.gob.mx/gobmx/img/logo_blanco.svg" alt="Gobierno de México"
+                        class="footer__escudo">
+                </div>
+                <div class="footer__enlaces">
+                    <details class="mexico__details" open>
+                        <summary class="footer__summary footer__summary--enlaces">
+                            <span class="footer__tit">Enlaces</span>
+                        </summary>
+                        <ul class="footer__detailsul">
+                            <li>
+                                <a class="footer__lia" href="https://participa.gob.mx/" target="_blank" rel="noopener"
+                                    title="El enlace abre en ventana nueva">
+                                    Participa</a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="http://www.ordenjuridico.gob.mx/" target="_blank"
+                                    rel="noopener" title="El enlace abre en ventana nueva">
+                                    Marco jurídico
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia"
+                                    href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml#inicio"
+                                    target="_blank" rel="noopener" title="El enlace abre en ventana nueva">
+                                    Plataforma Nacional de Transparencia
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="https://transparencia.gob.mx/home.html" target="_blank"
+                                    rel="noopener" title="El enlace abre en ventana nueva">
+                                    Transparencia para el pueblo
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="https://alertadores.buengobierno.gob.mx/" target="_blank"
+                                    rel="noopener" title="El enlace abre en ventana nueva">
+                                    Alerta
+                                </a>
+                            </li>
+
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="footer__gobmx">
+                    <details class="mexico__details" open>
+                        <summary class="footer__summary footer__summary--gobmx">
+                            <span class="footer__tit">¿Qué es gob.mx?</span>
+                        </summary>
+                        <p class="footer__p">
+                            Es el portal único de trámites, información y participación
+                            ciudadana. <a href="https://www.gob.mx/que-es-gobmx" target="_blank" rel="noopener"
+                                title="El enlace abre en ventana nueva"><b>Leer más</b></a>
+                        </p>
+                        <ul class="footer__detailsul">
+                            <li>
+                                <a class="footer__lia" href="https://datos.gob.mx/" target="_blank" rel="noopener"
+                                    title="El enlace abre en ventana nueva">
+                                    Portal de datos abiertos
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="https://www.gob.mx/accesibilidad" target="_blank"
+                                    rel="noopener" title="El enlace abre en ventana nueva">
+                                    Declaración de Accesibilidad
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="https://www.gob.mx/terminos" target="_blank" rel="noopener"
+                                    title="El enlace abre en ventana nueva">
+                                    Términos y Condiciones
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="footer__redes">
+                    <p class="footer__pa">
+                        <a href="https://sidec.buengobierno.gob.mx/#!/" target="_blank" rel="noopener"
+                            title="El enlace abre en ventana nueva">Denuncia contra servidores públicos</a>
+                    </p>
+                    <p class="footer__titsm">Síguenos en</p>
+                    <ul class="footer__redes__ul">
+                        <li>
+                            <a target="_blank" rel="noopener" title="El enlace abre en ventana nueva"
+                                href="https://www.facebook.com/gobmexico">
+                                <span class="oculto">Facebook de Presidencia</span>
+                                <img alt="" src="assets/icons-base/facebook.svg" aria-hidden="true">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" title="El enlace abre en ventana nueva"
+                                href="https://twitter.com/GobiernoMX">
+                                <span class="oculto">Equis de Presidencia</span>
+                                <img alt="" src="assets/icons-base/twitter-x.svg" aria-hidden="true">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" title="El enlace abre en ventana nueva"
+                                href="https://www.instagram.com/gobmexico/">
+                                <span class="oculto">Instagram de Presidencia</span>
+                                <img alt="" src="assets/icons-base/instagram.svg" aria-hidden="true">
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" title="El enlace abre en ventana nueva"
+                                href="https://www.youtube.com/@gobiernodemexico">
+                                <span class="oculto">Youtube de Presidencia</span>
+                                <img alt="" src="assets/icons-base/youtube.svg" aria-hidden="true">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__079">
+                        <img src="assets/icons-base/footer--flor.png" alt="" class="footer__079img" aria-hidden="true">
+                        <p class="footer__079info">
+                            <span class="footer__079num">079</span>
+                            <span class="footer__079txt">Comunícate, estamos para ayudarte</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- MODAL -->
+
+    <div class="modal fade" id="modalPDFreport" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal__sm">
+            <div class="modal__cont">
+                <div class="modal__header">
+                    <button type="button" class="btn-close modal__cerrar" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                    <i aria-hidden="true" class="bi bi-exclamation-triangle modal__icono modal--error"></i>
+                    <h1 class="modal__tit">Reporte de información del PDF</h1>
+                </div>
+
+                <div class="moda__body">
+                    <p>No se cuenta con datos registrados para imprimir</p>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="boton__primario">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCerrarSesion" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal__sm">
+            <div class="modal__cont">
+                <div class="modal__header">
+                    <button type="button" class="btn-close modal__cerrar" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                    <i aria-hidden="true" class="bi bi-exclamation-triangle modal__icono modal--error"></i>
+                    <h1 class="modal__tit">¿Deseas eliminar este usuario?</h1>
+                </div>
+
+                <div class="moda__body">
+                    <p>¿Estás seguro de que deseas cerrar la sesión?</p>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="boton__gris" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="boton__primario">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sincronizarInformacion" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal__sm">
+            <div class="modal__cont">
+                <div class="modal__header">
+                    <button type="button" class="btn-close modal__cerrar" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                    <i aria-hidden="true" class="bi bi-exclamation-triangle modal__icono modal--error"></i>
+                    <h1 class="modal__tit">Sincronizar usuario<br> con directorio activo</h1>
+                </div>
+
+                <div class="moda__body">
+                    <p>¿Confirmas que deseas actualizar la información<br> del usuario?</p>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="boton__gris" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="boton__primario">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="activarUsuario" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal__sm">
+            <div class="modal__cont">
+                <div class="modal__header">
+                    <button type="button" class="btn-close modal__cerrar" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                    <i aria-hidden="true" class="bi bi-exclamation-triangle modal__icono modal--error"></i>
+                    <h1 class="modal__tit">Activar usuario</h1>
+                </div>
+
+                <div class="moda__body">
+                    <p>¿Estás seguro de que deseas cambiar su estado?</p>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="boton__gris" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="boton__primario">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="desactivarUsuario" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal__sm">
+            <div class="modal__cont">
+                <div class="modal__header">
+                    <button type="button" class="btn-close modal__cerrar" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                    <i aria-hidden="true" class="bi bi-exclamation-triangle modal__icono modal--error"></i>
+                    <h1 class="modal__tit">Desactivar usuario</h1>
+                </div>
+
+                <div class="moda__body">
+                    <p>¿Estás seguro de que deseas cambiar su estado?</p>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="boton__gris" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="boton__primario">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="desactivarFail" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal__sm">
+            <div class="modal__cont">
+                <div class="modal__header">
+                    <button type="button" class="btn-close modal__cerrar" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                    <i aria-hidden="true" class="bi bi-exclamation-triangle modal__icono modal--error"></i>
+                    <h1 class="modal__tit">¡Atención!</h1>
+                </div>
+
+                <div class="moda__body">
+                    <p>El usuario <strong>{Nombre de usuario}</strong> no puede ser desactivado ya que cuenta con
+                        proyectos o actividades en curso</p>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="boton__primario">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!--SCRIPT SELECT -->
+    <script src="assets/js/header-footer-details.js"></script>
+    <!--SCRIPT ETIQUETAS DE TABLA EN FORMATO TARJETA -->
+    <script src="assets/js/tabla-etiquetas-responsivas.js"></script>
+</body>
+
+</html>

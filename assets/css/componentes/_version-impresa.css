@@ -1,0 +1,115 @@
+@page {
+    size: A4;
+    margin: .5cm .5cm 1.5cm;
+    orientation: portrait;
+
+    @bottom-right {
+        content: counter(page) " de " counter(pages);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12px;
+    }
+}
+
+
+@media print {
+    body {
+        margin: 0;
+    }
+    .header-impreso {
+        display: block;
+    }
+    p.header-impreso {
+        font-size: 12px;
+        border-top: 1px solid #AAAAAA;
+        border-bottom: 1px solid #AAAAAA;
+        margin-top: 1rem;
+    }
+    main {
+        border: 1px solid #ddd;
+        outline: 1px solid #ddd; 
+        outline-offset: -1px; 
+        margin: 0; 
+        padding-left: .5em;
+        padding-right: .5em !important;
+        border-radius: 5px;
+    }
+    .mainHgroup__tit {
+        display: block;
+        color: var(--primario500);
+        font-weight: 300;
+        letter-spacing: .5em;
+        text-transform: uppercase;
+        font-size: medium;
+    }
+    .resumenProy__datatit {
+        font-weight: 300;
+        font-size: 2em;
+    }
+    .header, .footer, .ruta, .botonera--der {
+        display: none;
+    }
+    .resumenProy { 
+        grid-template-columns:
+        calc( 70% - ( var(--filaColGap) * .5 ) )
+        1fr 
+        calc( 24.6% - ( var(--filaColGap) * .5 ) )
+    }
+    .resumenProy__data {
+    }
+    .resumenEstatus {
+        position: relative;
+    }
+    .resumenProy__avance {
+        position: absolute;
+        left: 1.4rem;
+        font-size: 50%;
+        padding: 12px;
+        width: 170px;
+    }
+    .cargaArchivos {
+        flex-direction: column;
+        width: 720px;
+    }
+    .cargaArchivos.row_wrap {
+        flex-direction: row;
+    }
+    .resumenProy__avancetit {
+        font-weight: 300;
+    }
+    .progresoAro--lg span {
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: .1rem;
+        position: relative;
+    }
+    .progresoAro--lg {
+        width: 3rem;
+        height: 3rem;
+        background-color: transparent;
+    }
+    .resumenProy__estatus, [class^="resumenProy__estatus--"] {
+        font-size: 12px !important;
+        margin: 12px auto 0;
+        font-weight: normal !important;
+        display: inline;
+    }
+    .progresoAro--lg:before {
+        background-color: transparent;
+    }
+    .resumenProy__li {
+        font-size: .65em;
+    }
+    .resumenProy__galeria {
+        margin-top: 12rem;
+    }
+    .mainHgroup {
+        margin-bottom: 0;
+    }
+    .resumenFichaContacto {
+        padding-top: 200px;
+        background: transparent;
+    }
+    .pestana__cont--1,.pestana__cont--2 {
+        display: block;
+    }
+}

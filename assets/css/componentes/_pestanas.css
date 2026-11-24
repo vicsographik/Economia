@@ -1,0 +1,60 @@
+/*Funcionamiento*/
+[class^="pestana__radio--"] {display: none;}
+[class^="pestana__radio--"]:checked + .pestana__label {background:var(--primario600); color:#FFF;}
+[class^="pestana__cont--"] { display:none}
+.pestana__radio--1:checked ~ .pestana__cont--1,
+.pestana__radio--2:checked ~ .pestana__cont--2,
+.pestana__radio--3:checked ~ .pestana__cont--3 {display: block;} 
+
+.pestana__tabs:has(.pestana__radio--1:checked) ~ .pestana__cont--1,
+.pestana__tabs:has(.pestana__radio--2:checked) ~ .pestana__cont--2,
+.pestana__tabs:has(.pestana__radio--3:checked) ~ .pestana__cont--3,
+.pestana__tabs:has(.pestana__radio--4:checked) ~ .pestana__cont--4,
+.pestana__tabs:has(.pestana__radio--5:checked) ~ .pestana__cont--5,
+.pestana__tabs:has(.pestana__radio--6:checked) ~ .pestana__cont--6,
+.pestana__tabs:has(.pestana__radio--7:checked) ~ .pestana__cont--7 { display:block;} 
+
+/*Diseño y extras*/
+.pestana__tabs { display:flex; align-items:stretch; column-gap:.25rem; border-bottom: 1px solid var(--neutro400);}
+
+/*Lista desplazable de pestañas (scroll horizontal en pantallas estrechas)*/
+.pestana__lista {
+    display:flex;
+    column-gap:.1rem;
+    flex:1 1 auto;
+    min-width:0;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+}
+.pestana__lista::-webkit-scrollbar { display:none;}
+
+/*Flechas de desplazamiento (ocultas por defecto, JS las muestra si hay contenido oculto)*/
+.pestana__flecha {
+    display:none;
+    flex:0 0 auto;
+    align-items:center;
+    justify-content:center;
+    width:2rem;
+    border:none;
+    background:var(--neutro300);
+    color:var(--primario600);
+    font-size:1.1rem;
+    cursor:pointer;
+}
+.pestana__flecha:hover { background:var(--neutro400);}
+.pestana__flecha.is-visible { display:flex;}
+
+.pestana__label { border-radius:.5rem .5rem 0 0; padding:.35rem .3rem; font-weight:400; box-shadow:0 -4px 4px rgba(0, 0, 0, 0.25) inset; background:var(--neutro400); position:relative; display:flex; align-items:center; line-height:1.25rem; cursor:pointer; white-space:nowrap;}
+.pestana__label:hover { box-shadow:0 0px 50px rgba(0, 0, 0, 0.3) inset}
+
+.pestana__nota { background:#D0021B; border-radius:.25rem; font-size:.875rem; font-weight:bold; color:#FFF; box-shadow:0 1px 0 rgba(255, 255, 255, 0.5); padding:.12rem .45rem; text-align:center; margin-left:.5rem;}
+
+@media (min-width:1150px) {
+    .pestana__lista { column-gap:.3rem;}
+    .pestana__label { margin-bottom:0; padding:0.625rem 1rem;}
+    /*Flechita indicadora*/
+    [class^="pestana__radio--"]:checked + .pestana__label:before { content:""; border-left:.75rem solid transparent;
+    border-right:.75rem solid transparent; border-bottom:.5rem solid var(--primario500); position:absolute;  bottom:0; left:50%;transform:translateX(calc(-50% + 0.5rem));}
+}

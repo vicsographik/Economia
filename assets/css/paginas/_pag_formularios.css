@@ -1,0 +1,102 @@
+.formulario { display:grid; row-gap:2rem;}
+.formulario_paso1 .form__grupo { width:66%; margin:2.5rem auto;}
+.results-summary { border: 3px var(--neutro500) dashed; padding: 1rem; border-radius: .5rem; }
+
+/* FOTO DE USUARIO */
+.foto-usuario .form__grupo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.foto-usuario__preview {
+    width: 11rem;
+    height: 13rem;
+    border-radius: 1rem;
+    background: var(--neutro300);
+    border: 3px solid var(--neutro700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.foto-usuario__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-usuario__placeholder {
+    font-size: 4rem;
+    color: var(--neutro500);
+}
+
+.foto-usuario__ayuda {
+    display: block;
+    margin-top: .5rem;
+    font-size: .875rem;
+    color: var(--neutro600);
+}
+
+.foto-usuario {
+    border-left: 1px solid var(--neutro500);
+    padding-left: 2rem;
+    height: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+/*.restuls-summary__cont {display: flex; flex-direction: row; justify-content: space-around; max-width: 50rem; margin: auto;}*/
+.restuls-summary__cont { text-align: center; min-height: 2rem;}
+.restuls-summary__cont::before { content:'';display: inline-block;height: 100%; vertical-align: middle;}
+.restuls-summary__cont > div { display: inline-block; margin: 0 1rem; height: 1rem;}
+.results-summary__div {height: 1.5rem; border-right: 1px solid var(--neutro700);}
+.inversion [class^="fila"] { align-items: center;}
+.mapa-mexico { background-image: url(../../img/Mexico-estados.svg); background-repeat: no-repeat; width: 28rem; height: 20rem; background-size: 29rem auto;
+background-position-x: -2rem;}
+
+.mapa-mexico.BC { background-position-y: -1868px;}
+.mapa-mexico.BCS { background-position-y: -2180px;}
+.mapa-mexico.Tamaulipas { background-position-y: -1560px;}
+.mapa-mexico.NuevoLeon { background-position-y: -1248px;}
+.mapa-mexico.Coahuila { background-position-y: -938px;}
+.mapa-mexico.Chihuahua { background-position-y: -627px;}
+.mapa-mexico.Sonora { background-position-y: -314px;}
+.mapa-mexico.Sinaloa { background-position-y: -2486px;}
+.mapa-mexico.Durango { background-position-y: -2801px;}
+.mapa-mexico.Zacatecas { background-position-y: -3106px;}
+.mapa-mexico.SLP { background-position-y: -3418px;}
+.mapa-mexico.Nayarit { background-position-y: -3729px;}
+.mapa-mexico.Jalisco { background-position-y: -4038px;}
+.mapa-mexico.Aguascalientes { background-position-y: -4352px;}
+.mapa-mexico.Guanajuato { background-position-y: -4659px;}
+.mapa-mexico.Queretaro { background-position-y: -4974px;}
+.mapa-mexico.Hidalgo { background-position-y: -5284px;}
+.mapa-mexico.Veracruz { background-position-y: -5592px;}
+.mapa-mexico.Colima { background-position-y: -5905px;}
+.mapa-mexico.Michoacan { background-position-y: -6213px;}
+.mapa-mexico.EdoMex { background-position-y: -6525px;}
+.mapa-mexico.CDMX { background-position-y: -6837px;}
+.mapa-mexico.Morelos { background-position-y: -7150px;}
+.mapa-mexico.Tlaxcala { background-position-y: -7461px;}
+.mapa-mexico.Puebla { background-position-y: -7774px;}
+.mapa-mexico.Guerrero { background-position-y: -8083px;}
+.mapa-mexico.Oaxaca { background-position-y: -8395px;}
+.mapa-mexico.Chiapas { background-position-y: -8706px;}
+.mapa-mexico.Tabasco { background-position-y: -9016px;}
+.mapa-mexico.Campeche { background-position-y: -9326px;}
+.mapa-mexico.Yucatan { background-position-y: -9638px;}
+.mapa-mexico.QuintanaRoo { background-position-y: -9948px;}
+
+
+@media (max-width:799px) { 
+    .formulario_paso1 .form__grupo { width:100%; margin:1.5rem auto;}
+    .restuls-summary__cont {flex-direction: column;}
+    .results-summary__div {display:none;}
+    .foto-usuario { border-left: none; padding-left: 0;}
+}

@@ -1,0 +1,24 @@
+/*RUTA o BREADCRUMB*/
+.ruta { margin:0 0 3rem 0; display:flex; align-items:center; justify-content:start; }
+.ruta__a,
+.ruta__li { color:var(--neutro700);}
+.ruta__ol { display:flex; list-style-type:none; padding:0px; margin:auto; width:100%;}
+.ruta__li:first-child { text-transform: none;}
+.ruta__li { font-weight:700; display:flex; align-items:center; line-height:normal; text-transform: uppercase;}
+.ruta__a:after  { content:""; width:1px; height:0.875rem; border-right:1px solid var(--neutro500)}
+.ruta__a { display:flex; align-items:center; text-decoration:none; font-weight:300; }
+.ruta__span { display:flex; align-items:center; text-decoration:none; font-weight:600; }
+.ruta__a .bi, .ruta__span .bi { margin-right:.5rem;}
+/*movil*/
+@media (max-width:767.9px) {
+.ruta__a,
+.ruta__li {  font-size:.83rem;}
+.ruta__a:after  { margin:0 .5rem;}
+}
+/*desk*/
+@media (min-width:768px) {
+.ruta__a,
+.ruta__li {  font-size:.875rem}
+.ruta__a:after  { margin:0 1rem;}
+
+}

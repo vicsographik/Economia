@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <title>SECCOR: Sistema de Sectores y Corredores</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="DESCRIPCIÓN">
+    <meta name="keywords" content="PALABRAS CLAVE">
+    <meta property="og:title" content="SECCOR: Sistema de Sectores y Corredores">
+    <meta property="og:description" content="DESCRIPCIÓN">
+
+    <!-- LA RUTA DE LA IMAGEN OG:IMG DEBE SER ABSOLUTA  -->
+    <meta property="og:image" content="assets/img/OG-IMG.png">
+
+    <link rel="shortcut icon" href="https://www.gob.mx/resources/img/favicon.ico">
+    <!-- BOOTSTRAP CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/seccor.css">
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="mexico">
+                <div class="mexico__contenedor">
+                    <div class="mexico__escudo">
+                        <a href="https://www.gob.mx/" class="mexico__aescudo">
+                            <img src="assets/img/gobierno-mexico.svg" class="mexico__img"
+                                alt="Ir a la página de inicio del Gobierno de México">
+                        </a>
+                    </div>
+                    <div class="mexico__menu">
+                        <details class="mexico__details" open>
+                            <summary class="mexico__summary">
+                                <span class="mexico__span">Páginas del Gobierno de México</span>
+                            </summary>
+                            <div class="mexico__detailsCont">
+                                <a href="https://www.gob.mx" class="mexico__a">Trámites</a>
+                                <a href="https://www.gob.mx/gobierno" class="mexico__a">Gobierno</a>
+                                <a href="https://www.gob.mx/busqueda" class="mexico__a" target="_blank" rel="noopener">
+                                    <span class="oculto">Ir a la página de búsqueda del Gobierno de México</span>
+                                    <img src="assets/icons-base/lupa.svg" alt="">
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="subheader">
+                <div class="subheader__contenedor">
+                    <div class="subheader__dependencia">
+                        ECONOMÍA
+                    </div>
+                    <!-- Aquí va el MENU cuando se necesite-->
+                    <!--nav class="subheader__nav">
+                        <details class="mexico__details" open>
+                            <summary class="mexico__summary subheader__navSummary">
+                                <span class="mexico__span">Menú</span>
+                            </summary>
+                            <div class="subheader__navCont">
+                                <ul class="subheader__navUl">
+                                    <li class="subheader__navLi"><a href="#" class="subheader__navLink">Opción 1</a></li>
+                                    <li class="subheader__navLi"><a href="#" class="subheader__navLink navLink--selected" aria-current="page">Opción 2 (seleccionada)</a></li>
+                                </ul>
+                            </div>
+                        </details>
+                    </nav-->
+                </div>
+            </div>
+            <div class="seccor">
+                <div class="seccor__cont">
+
+                    <div class="seccor__marca">
+                        <span class="marca__logo"><span>SE</span>ccor</span>
+                        <span class="marca__pipe"></span>
+                        <span class="marca__nombre">Sistema de Sectores y Corredores</span>
+                    </div>
+
+                    <div class="seccor__usr">
+                        <details class="seccor__details">
+                            <summary class="seccor__summary">
+                                <span class="seccor__summary1">
+                                    <span class="seccor__rol">Responsable de Sector</span>
+                                    <span class="seccor__nombre">Rodolfo Osorio de Carrera</span>
+                                </span>
+                                <span class="seccor__summary2">
+                                    <i aria-hidden="true" class="bi bi-person-circle seccor__usricon"></i>
+                                </span>
+                            </summary>
+                            <ul class="seccor__ul">
+                                <li class="seccor__li seccor__li--usr ">
+                                    <span class="seccor__rol seccor__rol--sm">RESPONSABLE DE SECTOR</span>
+                                    <span class="seccor__nombre seccor__nombre--sm">Rodolfo Osorio de Carrera</span>
+                                </li>
+                                <li class="seccor__li"><a href="#" class="seccor__link">Cuenta de usuario</a></li>
+                                <li class="seccor__li"><button data-bs-toggle="modal"
+                                        data-bs-target="#modalCerrarSesion" class="seccor__link">Cerrar sesión</button>
+                                </li>
+                            </ul>
+
+                        </details>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main">
+                <img class="header-impreso" src="./assets/img/header-impreso.jpg" alt="imagen de cabecera">
+                <p class="header-impreso"><strong>Usuario:</strong> Alan Leonardo Pacheco Gutiérrez |
+                    <strong>Rol:</strong> Responsable de sector | dd/mm/aaaa | hh:mm:ss
+                </p>
+                <div class="ruta">
+                    <ol class="ruta__ol">
+                        <li class="ruta__li"><a href="#" class="ruta__a"><i aria-hidden="true"
+                                    class="bi bi-house-door-fill"></i>
+                                Inicio</a></li>
+                        <li class="ruta__li" aria-current="page">Resumen de la actividad</li>
+                    </ol>
+                </div>
+
+                <section class="mainHgroup">
+                    <div class="mainHgroup__col1">
+                        <h1 class="mainHgroup__tit">Resumen de la actividad</h1>
+                        <hr>
+                    </div>
+                </section>
+
+                <div class="fila--mix-3-9 resumenProy">
+
+                    <section class="resumenProy__data">
+                        <h2 class="titProy">FERIA GANADERA</h2>
+                        <div class="pestana__tabs" role="tablist">
+                            <input class="pestana__radio--1" type="radio" name="tab" id="pestana-01" checked>
+                            <!-- Cuando la pestaña está seleccionada lleva aria-selected="true"  -->
+                            <label class="pestana__label" for="pestana-01" aria-controls="tabla-proyectos" role="tab"
+                                aria-selected="true">Datos de la actividad</label>
+
+                            <input class="pestana__radio--2" type="radio" name="tab" id="pestana-02">
+                            <!-- Cuando la pestaña no está seleccionada lleva aria-selected="false"  -->
+                            <label class="pestana__label" for="pestana-02" aria-controls="tabla-historia" role="tab"
+                                aria-selected="false">Información complementaria</label>
+                        </div>
+                        <div class="pestana__cont--1" aria-labelledby="tabla-proyectos" role="tabpanel">
+                            <ul class="resumenProy__ul">
+                                <li class="resumenProy__li"><strong>Tipo de registro:</strong> Actividad</li>
+                                <li class="resumenProy__li"><strong>Estado:</strong> Baja California</li>
+                                <li class="resumenProy__li"><strong>Tipo de compromiso:</strong> Inversión, Empleos,
+                                    Acuerdos/Otros</li>
+                                <li class="resumenProy__li"><strong>Inversión (MDD):</strong> 24,000,000</li>
+                                <li class="resumenProy__li"><strong>Número de empleos:</strong> 2400</li>
+                                <li class="resumenProy__li"><strong>Acuerdos / Otros:</strong> Dolor sit amet</li>
+                                <li class="resumenProy__li"><strong>Fecha de inicio:</strong> 00/00/0000</li>
+                                <li class="resumenProy__li"><strong>Fecha fin:</strong> 00/00/0000</li>
+                                <li class="resumenProy__li"><strong>Sector al que pertenece:</strong> Automotriz</li>
+                                <li class="resumenProy__li"><strong>Sectores con los cuales es compartido:</strong>
+                                    Industria Textil<br> Sector Agropecuario</li>
+                            </ul>
+                            <div class="fila--mix-8-4 mt__1-5">
+                                <div>
+                                    <dt>Objetivo de la actividad:</dt>
+                                    <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur
+                                        diam
+                                        ac semper varius. Curabitur varius interdum aliquam. Morbi aliquet orci non
+                                        laoreet
+                                        vulputate. Mauris ut mollis ex. Aliquam condimentum sodales ligula eget
+                                        malesuada.
+                                        Quisque rhoncus porttitor velit nec pulvinar. Sed commodo eros at sollicitudin
+                                        commodo. Aenean consectetur urna et tellus pretium, sit amet hendrerit eros
+                                        elei.</dd>
+                                </div>
+                            </div>
+                            <hr>
+                            <h3>Datos específicos</h3>
+                            <dl class="fila--col3">
+                                <div>
+                                    <dt>Tipo de evento:</dt>
+                                    <dd>Lorem ipsum</dd>
+                                </div>
+                                <div>
+                                    <dt>Nivel:</dt>
+                                    <dd>Lorem ipsum dolor sit amet</dd>
+                                </div>
+                                <div>
+                                    <dt>Lugar:</dt>
+                                    <dd>Centro Cultural Tijuana (CECUT)</dd>
+                                </div>
+                            </dl>
+                            <div>
+
+                                <dl>
+                                    <div class="fila--mix-8-4">
+                                        <div>
+                                            <dt>Objetivo:</dt>
+                                            <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                                                efficitur
+                                                diam ac semper varius. Curabitur varius interdum aliquam. Morbi aliquet
+                                                orci
+                                                non
+                                                laoreet vulputate. Mauris ut mollis ex. Aliquam condimentum sodales
+                                                ligula
+                                                eget
+                                                malesuada. Quisque rhoncus porttitor velit nec pulvinar. Sed commodo
+                                                eros at
+                                                sollicitudin commodo. Aenean consectetur urna et tellus pretium, sit
+                                                amet
+                                                hendrerit eros eleifend. Praesent erat mauris, congue eu lectus sit
+                                                amet,
+                                                ullamcorper porta nisl.</dd>
+                                        </div>
+                                    </div>
+                                    <div class="fila--mix-8-4">
+                                        <div>
+                                            <dt>Participantes:</dt>
+                                            <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                                                efficitur
+                                                diam ac semper varius. Curabitur varius interdum aliquam. Morbi aliquet
+                                                orci
+                                                non
+                                                laoreet vulputate. Mauris ut mollis ex. Aliquam condimentum sodales
+                                                ligula
+                                                eget
+                                                malesuada. Quisque rhoncus porttitor velit nec pulvinar. Sed commodo
+                                                eros at
+                                                sollicitudin commodo. Aenean consectetur urna et tellus pretium, sit
+                                                amet
+                                                hendrerit eros eleifend. Praesent erat mauris, congue eu lectus sit
+                                                amet,
+                                                ullamcorper porta nisl.</dd>
+                                        </div>
+                                    </div>
+                                    <div class="fila--mix-8-4">
+                                        <div>
+                                            <dt>Beneficios o resultados esperados:</dt>
+                                            <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                                                efficitur
+                                                diam ac semper varius. Curabitur varius interdum aliquam. Morbi aliquet
+                                                orci
+                                                non
+                                                laoreet vulputate. Mauris ut mollis ex. Aliquam condimentum sodales
+                                                ligula
+                                                eget
+                                                malesuada. Quisque rhoncus porttitor velit nec pulvinar. Sed commodo
+                                                eros at
+                                                sollicitudin commodo. Aenean consectetur urna et tellus pretium, sit
+                                                amet
+                                                hendrerit eros eleifend. Praesent erat mauris, congue eu lectus sit
+                                                amet,
+                                                ullamcorper porta nisl.</dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                                <hr>
+                                <div class="fila--mix-8-4 mt__1-5">
+                                    <div>
+                                        <dt>Beneficios para el sector:</dt>
+                                        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                                            efficitur
+                                            diam
+                                            ac semper varius. Curabitur varius interdum aliquam. Morbi aliquet orci non
+                                            laoreet
+                                            vulputate. Mauris ut mollis ex. Aliquam condimentum sodales ligula eget
+                                            malesuada.
+                                            Quisque rhoncus porttitor velit nec pulvinar. Sed commodo eros at
+                                            sollicitudin
+                                            commodo. Aenean consectetur urna et tellus pretium, sit amet hendrerit eros
+                                            elei.</dd>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div class="cargaArchivos mt__1">
+                                    <div class="fichaEtapa">
+                                        <h2 class="mt__1 p--nn fw__600">Tiempo de ejecución:</h2>
+                                        <div class="fila--col2--resp mt__1">
+                                            <div><strong>Fecha de inicio:</strong><br>
+                                                00/00/0000</div>
+                                            <div><strong>Fecha fin:</strong><br>
+                                                00/00/0000</div>
+                                        </div>
+                                    </div>
+                                    <div class="cargaArchivos--row">
+                                        <p class="m__0"><strong>Evidencia documental o fotográfica</strong></p>
+                                        <div class="cargaArchivos row_wrap">
+                                            <div class="cargaArchivos--upload img-load">
+                                                <img src="assets/img/ima-27.png" alt="evidencia 1">
+                                            </div>
+                                            <div class="cargaArchivos--upload doc-load">
+                                                <div><i class="doc-loaded bi bi-file-earmark-word"
+                                                        aria-hidden="true"></i>
+                                                    Nombre-del-archivo.docx</div>
+                                            </div>
+                                            <div class="cargaArchivos--upload doc-load">
+                                                <div><i class="doc-loaded bi bi-file-earmark-word"
+                                                        aria-hidden="true"></i>
+                                                    Nombre-del-archivo.docx</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="pestana__cont--2" aria-labelledby="tabla-historia" role="tabpanel">
+                            <div class="fila--mix-8-4">
+                                <div>
+                                    <dl>
+                                        <dt>Resultados o beneficios obtenidos:</dt>
+                                        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                                            efficitur diam ac semper varius. Curabitur varius interdum aliquam. Morbi
+                                            aliquet orci non laoreet vulputate. Mauris ut mollis ex. Aliquam condimentum
+                                            sodales ligula eget malesuada. Quisque rhoncus porttitor velit nec pulvinar.
+                                            Sed commodo eros at sollicitudin commodo. Aenean consectetur urna et tellus
+                                            pretium, sit amet hendrerit eros eleifend. Praesent erat mauris, congue eu
+                                            lectus sit amet, ullamcorper porta nisl.</dd>
+                                        <dt>Seguimiento y acciones subsecuentes:</dt>
+                                        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                                            efficitur diam ac semper varius. Curabitur varius interdum aliquam. Morbi
+                                            aliquet orci non laoreet vulputate. Mauris ut mollis ex. Aliquam condimentum
+                                            sodales ligula eget malesuada. Quisque rhoncus porttitor velit nec pulvinar.
+                                            Sed commodo eros at sollicitudin commodo. Aenean consectetur urna et tellus
+                                            pretium, sit amet hendrerit eros eleifend. Praesent erat mauris, congue eu
+                                            lectus sit amet, ullamcorper porta nisl.</dd>
+                                    </dl>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class="fila--mix-8-4">
+                                <div>
+                                    <dl>
+                                        <dt>Análisis y valoración de la actividad:</dt>
+                                        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                                            efficitur diam ac semper varius. Curabitur varius interdum aliquam. Morbi
+                                            aliquet orci non laoreet vulputate. Mauris ut mollis ex. Aliquam condimentum
+                                            sodales ligula eget malesuada. Quisque rhoncus porttitor velit nec pulvinar.
+                                            Sed commodo eros at sollicitudin commodo. Aenean consectetur urna et tellus
+                                            pretium, sit amet hendrerit eros eleifend. Praesent erat mauris, congue eu
+                                            lectus sit amet, ullamcorper porta nisl.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </section>
+                    <div class="resumenEstatus resProy">
+                        <section class="resumenProy__avance">
+                            <h3 class="resumenProy__avancetit">Estatus</h3>
+                            <p class="resumenProy__estatus"><span class="resumenProy__estatus--etapa">NO COMPLETADO</span>
+                            </p>
+                            <!--Otras clases para estatus: .resumenProy__estatus--vencer (amarillo preventivo),
+                            .resumenProy__estatus--etapa (marrón)
+                            .resumenProy__estatus--est (gris)
+                            .resumenProy__estatus--ret (rojo)
+                            .resumenProy__estatus--app (verde)-->
+                            <hr>
+                            <p><strong>Causa:</strong><br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur diam ac
+                                semper varius. Curabitur varius interdum aliquam. Morbi aliquet orci non laoreet
+                                vulputate. Mauris ut mollis ex.
+                            </p>
+                        </section>
+                        <section class="resumenFichaContacto mt__1">
+                            <h3 class="resumenProy__avancetit">Datos de contacto</h3>
+                            <address class="contacto-detalle">
+                                <dl>
+                                    <div>
+                                        <dt>Nombre</dt>
+                                        <dd>Lorem Ipsum Dolor</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Cargo</dt>
+                                        <dd>Director de Proyectos</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Teléfono</dt>
+                                        <dd><a href="tel:+0000000000">00 0000 0000</a></dd>
+                                    </div>
+                                    <div>
+                                        <dt>Correo electrónico</dt>
+                                        <dd><a href="mailto:correo@electronico.com">correo@electronico.com</a></dd>
+                                    </div>
+                                    <div>
+                                        <dt>Otros datos</dt>
+                                        <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</dd>
+                                    </div>
+                                </dl>
+                            </address>
+                        </section>
+                    </div>
+                </div>
+
+                <div class="botonera--der botonera--borde botonera--responsiva botonera--wrap">
+                    <a href="#" class="boton__secundario boton--100sm boton--3">Regresar</a>
+                    <button class="boton__primario boton--100sm boton--1"><i aria-hidden="true"
+                            class="bi bi-file-earmark-pdf-fill"></i> Exportar información a PDF</button>
+                </div>
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__contenedor">
+                <div class="footer__mexico">
+                    <img src="https://framework-gb.cdn.gob.mx/gobmx/img/logo_blanco.svg" alt="Gobierno de México"
+                        class="footer__escudo">
+                </div>
+
+                <div class="footer__enlaces">
+                    <details class="mexico__details" open>
+                        <summary class="footer__summary footer__summary--enlaces">
+                            <span class="footer__tit">Enlaces</span>
+                        </summary>
+                        <ul class="footer__detailsul">
+                            <li>
+                                <a class="footer__lia" href="https://participa.gob.mx/" target="_blank" rel="noopener"
+                                    title="El enlace abre en ventana nueva">
+                                    Participa</a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="http://www.ordenjuridico.gob.mx/" target="_blank"
+                                    rel="noopener" title="El enlace abre en ventana nueva">
+                                    Marco jurídico
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia"
+                                    href="https://consultapublicamx.plataformadetransparencia.org.mx/vut-web/faces/view/consultaPublica.xhtml#inicio"
+                                    target="_blank" rel="noopener" title="El enlace abre en ventana nueva">
+                                    Plataforma Nacional de Transparencia
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="https://transparencia.gob.mx/home.html" target="_blank"
+                                    rel="noopener" title="El enlace abre en ventana nueva">
+                                    Transparencia para el pueblo
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="https://alertadores.buengobierno.gob.mx/" target="_blank"
+                                    rel="noopener" title="El enlace abre en ventana nueva">
+                                    Alerta
+                                </a>
+                            </li>
+
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="footer__gobmx">
+                    <details class="mexico__details" open>
+                        <summary class="footer__summary footer__summary--gobmx">
+                            <span class="footer__tit">¿Qué es gob.mx?</span>
+                        </summary>
+                        <p class="footer__p">
+                            Es el portal único de trámites, información y participación
+                            ciudadana. <a href="https://www.gob.mx/que-es-gobmx" target="_blank" rel="noopener"
+                                title="El enlace abre en ventana nueva"><b>Leer más</b></a>
+                        </p>
+                        <ul class="footer__detailsul">
+                            <li>
+                                <a class="footer__lia" href="https://datos.gob.mx/" target="_blank" rel="noopener"
+                                    title="El enlace abre en ventana nueva">
+                                    Portal de datos abiertos
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="https://www.gob.mx/accesibilidad" target="_blank"
+                                    rel="noopener" title="El enlace abre en ventana nueva">
+                                    Declaración de Accesibilidad
+                                </a>
+                            </li>
+                            <li>
+                                <a class="footer__lia" href="https://www.gob.mx/terminos" target="_blank" rel="noopener"
+                                    title="El enlace abre en ventana nueva">
+                                    Términos y Condiciones
+                                </a>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+
+                <div class="footer__redes">
+                    <p class="footer__pa">
+                        <a href="https://sidec.buengobierno.gob.mx/#!/" target="_blank" rel="noopener"
+                            title="El enlace abre en ventana nueva">Denuncia contra servidores públicos</a>
+                    </p>
+                    <p class="footer__titsm">Síguenos en</p>
+                    <ul class="footer__redes__ul">
+                        <li>
+                            <a class="" target="_blank" rel="noopener" title="El enlace abre en ventana nueva"
+                                href="https://www.facebook.com/gobmexico" aria-label="Facebook de Presidencia">
+                                <img alt="Facebook" src="assets/icons-base/facebook.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="" target="_blank" rel="noopener" title="El enlace abre en ventana nueva"
+                                href="https://twitter.com/GobiernoMX" aria-label="X de Presidencia">
+                                <img alt="X" src="assets/icons-base/twitter-x.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="" target="_blank" rel="noopener" title="El enlace abre en ventana nueva"
+                                href="https://www.instagram.com/gobmexico/" aria-label="Instagram de Presidencia">
+                                <img alt="instagram" src="assets/icons-base/instagram.svg">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="" target="_blank" rel="noopener" title="El enlace abre en ventana nueva"
+                                href="https://www.youtube.com/@gobiernodemexico" aria-label="Youtube de Presidencia">
+                                <img alt="youtube" src="assets/icons-base/youtube.svg">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__079">
+                        <img src="assets/icons-base/footer--flor.png" alt="" class="footer__079img">
+                        <p class="footer__079info">
+                            <span class="footer__079num">079</span>
+                            <span class="footer__079txt">Comunícate, estamos para ayudarte</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- MODAL SOLICITAR EDICIÓN-->
+    <div class="modal fade" id="modalEditar" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal__sm">
+            <div class="modal__cont">
+                <div class="modal__header">
+                    <button type="button" class="btn-close modal__cerrar" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
+                    <i aria-hidden="true" class="bi bi-exclamation-triangle modal__icono modal--error"></i>
+                    <h1 class="modal__tit">Solicitar permiso de edición</h1>
+
+                </div>
+
+                <div class="moda__body">
+                    <p>Se enviará una solicitud al responsable para su aprobación.</p>
+                    <p>¿Deseas continuar?</p>
+                </div>
+                <div class="modal__footer">
+                    <button type="button" class="boton__gris" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="boton__primario">Solicitar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <!--SCRIPT SELECT -->
+    <script src="assets/js/header-footer-details.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+/*BARRA DE PROGRESO DIV*/
+.progresoBar { width:50%; margin:auto;}
+.progresoBar__avance { display:flex; align-items:end; flex-direction: column;}
+[class^="progresoBar__barra"] { height:.75rem; background-color:var(--neutro400) !important; border-radius:1rem; width:100%; position:relative; overflow:hidden; }
+.progresoBar__info { font-weight:300; color:var(--neutro600);}
+.progresoBar__tit { font-size:2.3rem; font-weight:normal; margin:2rem 0;}
+.progresoBar__tit span { color:var(--primario500);}
+[class^="progresoBar__barra"]:before { content:""; position:absolute; height:.75rem; width:1rem;}
+/*color*/
+.progresoBar__barra--primario:before  { background:var(--primario500);}
+.progresoBar__barra--secundario:before  { background:var(--secundario500);}
+
+/*BARRA DE PROGRESO PROGRESS*/
+progress { background-color:var(--neutro400);}
+[class^="progresoBar__barra"]::-webkit-progress-value { background:var(--primario500);}
+[class^="progresoBar__barra"]::-moz-progress-bar { background:var(--primario500);}
+
+/* % avance */
+.progresoBar__barra--0:before { width:0%;}
+.progresoBar__barra--5:before { width:5%;}
+.progresoBar__barra--10:before { width:10%;}
+.progresoBar__barra--15:before { width:15%;}
+.progresoBar__barra--20:before { width:20%;}
+.progresoBar__barra--25:before { width:25%;}
+.progresoBar__barra--30:before { width:30%;}
+.progresoBar__barra--35:before { width:35%;}
+.progresoBar__barra--40:before { width:40%;}
+.progresoBar__barra--45:before { width:45%;}
+.progresoBar__barra--50:before { width:50%;}
+.progresoBar__barra--55:before { width:55%;}
+.progresoBar__barra--60:before { width:60%;}
+.progresoBar__barra--65:before { width:65%;}
+.progresoBar__barra--70:before { width:70%;}
+.progresoBar__barra--75:before { width:75%;}
+.progresoBar__barra--80:before { width:80%;}
+.progresoBar__barra--85:before { width:85%;}
+.progresoBar__barra--90:before { width:90%;}
+.progresoBar__barra--95:before { width:95%;}
+.progresoBar__barra--100:before { width:100%;}
+
+@media (max-width:799px) {
+    .progresoBar { width:100%; margin:auto;}
+    .progresoBar__tit { font-size:1.75rem; margin:1.5rem 0;}
+}
+
+/*ARO DE PROGRESO*/
+[class^="progresoAro--"] { width:2.5rem; height:2.5rem; display:flex; align-items:center; justify-content:center; border-radius:50%; position: relative;}
+[class^="progresoAro--"]:before { content:""; position:absolute; width:2rem; height:2rem; border-radius:50%; background:#FFF;}
+[class^="progresoAro--"] span { font-size:.75rem; font-weight:bold; letter-spacing:-0.03rem; position:relative;}
+/*grande*/
+
+.progresoAro--lg  { width:11rem; height:11rem; border-radius:50%; margin:auto; }
+.progresoAro--lg:before { content:""; position:absolute; width:10rem; height:10rem; border-radius:50%; background:#FFF;}
+.progresoAro--lg span { font-size:3.75rem; font-weight:300; letter-spacing:-0.3rem; position:relative;}
+
+/*sin animación, por si no la soportan*/
+.progresoAro--0 { background:conic-gradient(var(--neutro200), var(--neutro200)) }
+.progresoAro--1x { background:conic-gradient(#98989A 0deg 90deg, var(--neutro200) 90deg 360deg); }
+.progresoAro--2x { background:conic-gradient(#E3D19B 0deg 180deg, var(--neutro200) 180deg 360deg); }
+.progresoAro--3x { background:conic-gradient(#8F2E48 0deg 270deg, var(--neutro200) 270deg 360deg); }
+.progresoAro--4x { background:conic-gradient(#65C26B, #65C26B) }
+
+/*con animación */
+.progresoAro--1 { background:conic-gradient(#98989A var(--aro1), var(--neutro200) var(--aro1)); animation:cuarto1 1s}
+.progresoAro--2 { background:conic-gradient(#E3D19B var(--aro2), var(--neutro200) var(--aro2)); animation:cuarto2 1.5s}
+.progresoAro--3 { background:conic-gradient(#8F2E48 var(--aro3), var(--neutro200) var(--aro3)); animation:cuarto3 2s}
+.progresoAro--4 { background:conic-gradient(#65C26B var(--aro4), var(--neutro200) var(--aro4)); animation:cuarto4 2.5s}
+
+.progresoAro--1,
+.progresoAro--2,
+.progresoAro--3,
+.progresoAro--4 { animation-delay:.5s; animation-fill-mode:forwards;}
+
+/*ángulos*/
+@property --aro1 { syntax: "<angle>"; inherits: false; initial-value: 0deg;}
+@property --aro2 { syntax: "<angle>"; inherits: false; initial-value: 0deg;}
+@property --aro3 { syntax: "<angle>"; inherits: false; initial-value: 0deg;}
+@property --aro4 { syntax: "<angle>"; inherits: false; initial-value: 0deg;}
+
+/*animaciones*/
+@keyframes cuarto1 {
+    0%   { --aro1:   0deg;}
+    100% { --aro1: 90deg;}
+}
+
+@keyframes cuarto2 {
+    0%   { --aro2:   0deg;}
+    100% { --aro2: 180deg;}
+}
+
+@keyframes cuarto3 {
+    0%   { --aro3:   0deg;}
+    100% { --aro3: 270deg;}
+}
+
+@keyframes cuarto4 {
+    0%   { --aro4:   0deg;}
+    100% { --aro4: 360deg;}
+}

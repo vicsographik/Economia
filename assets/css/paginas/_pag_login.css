@@ -1,0 +1,71 @@
+
+.wrapper--login { background-image: linear-gradient(20deg, #FFF 70%, #C9C9C9); }
+
+.economia__portada { text-align:center; background:url(../../img/economia-fondo.jpg) repeat-x;}
+.economia__pleca { margin:auto; height:249px; background: url(../../img/economia-portada.jpg) no-repeat center; }
+
+.main--login { display:flex; gap:1rem; padding-top:3rem; justify-content: space-around; background:none; }
+.login  { width:30.5rem;}
+.seccormapa { text-align:right;}
+.seccormapa__img { width:100%;}
+
+.login__cols { display:flex; gap:8.33%; justify-content:space-around; align-items: flex-start; }
+.login__orgTit  { font-size:2.6rem; font-weight:bold; color:var(--secundario); margin:0;}
+.login__orgDesc { font-size:1.75rem; font-weight:400; line-height:normal; margin-bottom:2rem;}
+
+.login__instruccion { font-weight:600; margin-bottom:2rem;}
+
+.login__fieldset { display:flex; padding:0; align-items:center; justify-content:space-between;}
+.login__opcionesForms { row-gap:2rem; display:grid;}
+.login__opciones .aviso { margin-bottom:2rem;}
+.form__olvidar { margin-top:.5rem; display:inline-block; color:var(--primario600); line-height:normal;}
+.login__opcionesBotonera { display:flex; column-gap:1.5rem; align-items:center; justify-content:center;}
+.login__linea { border-left:solid 1px #DDD; width:1px; height:24px;}
+
+.boton--100 { width:100%;}
+.form__validar--false { display:none;}
+
+
+@media (min-width: 1201px) {
+    .login  { width:39%;}
+    .seccormapa { width:40%;}
+}
+
+@media (min-width:1050px) and (max-width: 1200px) {
+    .login  { width:44%; }
+    .seccormapa { width:38%;}
+   
+}
+
+@media (min-width:500px) and (max-width:1049px) {
+    .login  { width:45%; }
+    .seccormapa { width:30%;}
+}
+
+@media (max-width:650px) {
+    .economia__pleca { margin:auto; height:249px; background: url(../../img/economia-portada--sm.jpg) no-repeat center / cover }
+    .botonera--between { flex-direction:column; }
+    .seccormapa { display:none;}
+    .login  { width:100%;}
+    .login__orgTit,
+    .login__orgDesc,
+    .login__instruccion { text-align:center; font-weight:normal;} 
+}
+
+@media (max-width:499px) {
+    .wrapper--login { background:url(../../img/fondo--texturaLogin.png) no-repeat center bottom / cover;}
+    .economia__pleca { height:190px; box-shadow:0 2px 8px rgba(0, 0, 0, 0.15);}
+    .main--login { flex-direction:column; gap:.5rem;}
+    
+    
+    .seccormapa__img { width:50%;}
+
+    .login__orgTit  { font-size:2rem; font-weight:600; margin-bottom:1rem;}
+    .login__orgDesc { font-size:1.5rem; margin-bottom:1.25rem;}
+    .login__instruccion { margin-bottom:1.25rem;}
+    .login__opcionesForms { row-gap:1.25rem;}
+
+    .login__opciones .botonera--between [class^="boton"] { padding-bottom:1.25rem; padding-top:1.25rem; font-weight:600;}
+
+    
+}

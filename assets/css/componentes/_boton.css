@@ -1,0 +1,744 @@
+/*BOTONES*/
+
+/*base*/
+[class^="boton"] {
+    background: transparent;
+    border: solid 1px transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    /*inline-block*/
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 24px;
+    text-align: center;
+    line-height: normal;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    user-select: none;
+    white-space: nowrap;
+    touch-action: manipulation;
+    min-width: 50px;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.width--100 [class^="boton"] {
+    width: 100%;
+}
+
+.button-prev-colaps {
+    min-width: 220px;
+}
+
+@media (max-width:400px) {
+    [class^="boton"] {
+        padding: .5rem 1rem;
+    }
+}
+
+.boton--vertical {
+    flex-direction: column;
+    row-gap: .25rem;
+}
+
+.boton--icono {
+    padding: .5rem;
+    min-width: unset;
+}
+
+.boton--iconoSm {
+    padding: .25rem .5rem;
+    min-width: unset;
+}
+
+/*BOTON ANCHO*/
+.boton--100 {
+    width: 100%;
+    min-width: unset
+}
+
+.boton--ancho {
+    padding: .5rem 4rem;
+}
+
+/*HOVER BÁSICO*/
+[class^="boton"]:hover {
+    background: var(--neutro200);
+}
+
+[class^="boton"]:active {
+    background: var(--neutro300);
+}
+
+/*DESHABILITADO*/
+[class^="boton"]:disabled,
+[class^="boton"][class*="disabled"] {
+    cursor: not-allowed;
+}
+
+/*Icono
+[class^="boton"] img { height:1.06rem;}
+[class^="boton__basico"] img:not(.not-filter), 
+[class^="boton__primario"] img:not(.not-filter), 
+[class^="boton__secundario"] img:not(.not-filter), 
+[class^="boton"][class*="--borde"]:hover img:not(.not-filter) { filter: invert(1) brightness(50) contrast(200%); }
+*/
+
+[class^="boton"][class*="--borde"] img {
+    filter: none;
+}
+
+[class^="boton"][class*="--borde"][disabled]:hover img,
+[class^="boton"][class*="--borde"][disabled]:focus img,
+[class^="boton"][class*="--borde"][disabled] img {
+    filter: opacity(.4);
+}
+
+/*HOME para VNDI*/
+.boton--home {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    padding: .5rem 1.5rem;
+    min-height: 100px;
+    align-content: center;
+}
+
+.boton__home {
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFF;
+    padding: .5rem 1.5rem;
+    min-height: 100px;
+    align-content: center
+}
+
+.boton__home,
+.boton__home:focus {
+    background: var(--primario500);
+    border-color: var(--primario500);
+    color: #FFF;
+}
+
+.boton__home:hover {
+    background: var(--primario600);
+    border-color: var(--primario600);
+    color: #FFF;
+}
+
+.boton__home:active {
+    background: var(--primario500);
+    color: #FFF;
+}
+
+.boton__homeLg {
+    border-radius: 1rem 0 0 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FFF;
+    padding: .5rem 1.5rem;
+    min-height: 100px;
+    align-content: center
+}
+
+.boton__homeLg,
+.boton__homeLg:focus,
+.boton__homeLg:hover,
+.boton__homeLg:active {
+    background-image: linear-gradient(to top, #022829, #054847);
+    border-color: var(--primario700);
+    color: #FFF;
+}
+
+.boton__homeLg:hover {
+    box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.5) inset;
+}
+
+.boton__homeLg:active {
+    box-shadow: 0px 0px 150px rgba(0, 0, 0, 0.2) inset;
+}
+
+/*boton grande*/
+.boton--lg {
+    font-size: 1.75rem;
+    font-weight: 700;
+    padding: .9rem;
+    min-width: 16.5rem;
+    border-radius: .5rem;
+}
+
+/*PRIMARIO*/
+/*relleno*/
+.boton__primario,
+.boton__primario:focus {
+    background: var(--primario600);
+    border-color: var(--primario600)
+}
+
+.boton__primario:hover {
+    background: var(--primario700)
+}
+
+.boton__primario:active {
+    background: var(--primario500)
+}
+
+/*relleno deshabilitado*/
+.boton__primario--disabled,
+.boton__primario:disabled,
+.boton__primario--disabled:hover,
+.boton__primario:disabled:hover {
+    background: #A07184;
+    border-color: #A07184
+}
+
+[class^="boton__primario"],
+[class^="boton__primario"] *,
+[class^="boton__primario"]:hover,
+[class^="boton__primario"]:active,
+[class^="boton__primario"]:focus {
+    color: #FFF
+}
+
+/*borde*/
+.boton__primario--borde,
+.boton__primario--borde:focus {
+    color: var(--primario600);
+    border-color: var(--primario600);
+    background: #FFF;
+}
+
+.boton__primario--borde:hover {
+    color: #FFF;
+    background: var(--primario600);
+}
+
+.boton__primario--borde:active,
+.boton__primario--borde[aria-current="page"] {
+    color: #FFF;
+    background: var(--primario500);
+}
+
+.boton--iconoSm[aria-current="page"] .bi {
+    color: #ffffff;
+}
+
+.boton__primario--borde * {
+    color: var(--primario600);
+}
+
+.boton__primario--borde:focus * {
+    color: var(--primario600);
+}
+
+.boton__primario--borde:hover *,
+.boton__primario--borde:active * {
+    color: #FFF;
+}
+
+.activar {
+    color: var(--exitoTxt);
+}
+
+.desactivar {
+    color: var(--errorTxt);
+}
+
+.boton__primario--borde .bi.bi-check-circle-fill {
+    color: var(--exitoTxt);
+}
+
+.boton__primario--borde .bi.bi-x-circle-fill {
+    color: var(--false);
+}
+
+/*borde deshabilitado*/
+.boton__primario--borde--disabled,
+.boton__primario--borde--disabled i,
+.boton__primario--borde--disabled:hover,
+.boton__primario--borde--disabled:focus,
+.boton__primario--borde[disabled],
+.boton__primario--borde[disabled] i,
+.boton__primario--borde[disabled]:hover,
+.boton__primario--borde[disabled]:focus {
+    border-color: var(--primarioDsbld);
+    color: var(--primarioDsbld) !important;
+    background: var(--neutro400);
+}
+
+/*SECUNDARIO*/
+/*relleno*/
+.boton__secundario,
+.boton__secundario:focus {
+    background: var(--neutro700);
+    border-color: var(--neutro700)
+}
+
+.boton__secundario:hover {
+    background: var(--neutro800)
+}
+
+.boton__secundario:active {
+    background: var(--neutro600)
+}
+
+/*relleno deshabilitado*/
+.boton__secundario--disabled,
+.boton__secundario:disabled,
+.boton__secundario--disabled:hover,
+.boton__secundario:disabled:hover {
+    background: var(--neutro500);
+    border-color: var(--neutro500)
+}
+
+[class^="boton__secundario"],
+[class^="boton__secundario"] *,
+[class^="boton__secundario"]:hover,
+[class^="boton__secundario"]:active,
+[class^="boton__secundario"]:focus {
+    color: #FFF
+}
+
+/*borde*/
+.boton__secundario--borde,
+.boton__secundario--borde:focus {
+    color: var(--neutro700);
+    border-color: var(--neutro700);
+    background: #FFF;
+}
+
+.boton__secundario--borde:hover {
+    color: #FFF;
+    background: var(--neutro700);
+}
+
+.boton__secundario--borde:active {
+    color: #FFF;
+    background: var(--neutro600);
+}
+
+.boton__secundario--borde * {
+    color: var(--neutro700);
+}
+
+.boton__secundario--borde:focus * {
+    color: var(--neutro700);
+}
+
+.boton__secundario--borde:hover *,
+.boton__secundario--borde:active * {
+    color: #FFF;
+}
+
+/*borde deshabilitado*/
+.boton__secundario--borde--disabled,
+.boton__secundario--borde--disabled:hover,
+.boton__secundario--borde--disabled:focus,
+.boton__secundario--borde[disabled],
+.boton__secundario--borde[disabled]:hover,
+.boton__secundario--borde[disabled]:focus {
+    border-color: var(--neutro600);
+    color: var(--neutro600);
+    background: #FFF;
+}
+
+/*neutro600*/
+/*relleno*/
+.boton__basico,
+.boton__basico:focus {
+    background: #DDD;
+    border-color: #DDD;
+}
+
+.boton__basico:hover {
+    background: #CCC
+}
+
+.boton__basico:active {
+    background: #EEE
+}
+
+/*relleno deshabilitado*/
+.boton__basico--disabled,
+.boton__basico:disabled,
+.boton__basico--disabled:hover,
+.boton__basico:disabled:hover {
+    background: var(--neutro500);
+    border-color: var(--neutro500)
+}
+
+[class^="boton__basico"],
+[class^="boton__basico"] *,
+[class^="boton__basico"]:hover,
+[class^="boton__basico"]:active,
+[class^="boton__basico"]:focus {
+    color: #000
+}
+
+/*borde*/
+.boton__basico--borde,
+.boton__basico--borde:focus {
+    color: var(--neutro600);
+    border-color: var(--neutro600);
+    background: #FFF;
+}
+
+.boton__basico--borde:hover {
+    color: #FFF;
+    background: var(--neutro600);
+}
+
+.boton__basico--borde:active {
+    color: #FFF;
+    background: var(--neutro500);
+}
+
+.boton__basico--borde *,
+.boton__basico--borde:focus * {
+    color: var(--neutro600)
+}
+
+.boton__basico--borde:hover * {
+    color: #FFF
+}
+
+.boton__basico--borde:active * {
+    color: #FFF
+}
+
+/*borde deshabilitado*/
+.boton__basico--borde--disabled,
+.boton__basico--borde--disabled:hover,
+.boton__basico--borde--disabled:focus,
+.boton__basico--borde[disabled],
+.boton__basico--borde[disabled]:hover,
+.boton__basico--borde[disabled]:focus {
+    border-color: var(--neutro500);
+    color: var(--neutro500);
+    background: #FFF;
+}
+
+/*GRIS*/
+/*relleno*/
+.boton__gris,
+.boton__gris:focus {
+    background: var(--neutro600);
+    border-color: var(--neutro600);
+}
+
+.boton__gris:hover {
+    background: var(--neutro700)
+}
+
+.boton__gris:active {
+    background: var(--neutro500)
+}
+
+/*relleno deshabilitado*/
+.boton__gris--disabled,
+.boton__gris:disabled,
+.boton__gris--disabled:hover,
+.boton__gris:disabled:hover {
+    background: var(--neutro500);
+    border-color: var(--neutro500)
+}
+
+[class^="boton__gris"],
+[class^="boton__gris"] *,
+[class^="boton__gris"]:hover,
+[class^="boton__gris"]:active,
+[class^="boton__gris"]:focus {
+    color: #FFF
+}
+
+/*borde*/
+.boton__gris--borde,
+.boton__gris--borde:focus {
+    color: var(--neutro600);
+    border-color: var(--neutro600);
+    background: #FFF;
+}
+
+.boton__gris--borde:hover {
+    color: #FFF;
+    background: var(--neutro600);
+}
+
+.boton__gris--borde:active {
+    color: #FFF;
+    background: var(--neutro500);
+}
+
+.boton__gris--borde *,
+.boton__gris--borde:focus * {
+    color: var(--neutro600)
+}
+
+.boton__gris--borde:hover *,
+.boton__gris--borde:active * {
+    color: #FFF
+}
+
+/*borde deshabilitado*/
+.boton__gris--borde--disabled,
+.boton__gris--borde--disabled:hover,
+.boton__gris--borde--disabled:focus,
+.boton__gris--borde[disabled],
+.boton__gris--borde[disabled]:hover,
+.boton__gris--borde[disabled]:focus {
+    border-color: var(--neutro500);
+    color: var(--neutro500);
+    background: #FFF;
+}
+
+/*LINK*/
+.boton__link {
+    color: var(--primario600);
+    text-decoration: underline;
+}
+
+.boton__link * {
+    color: var(--primario600);
+}
+
+.boton__transparente,
+.boton__transparente * {
+    color: var(--primario600);
+}
+
+.boton__link--neutro,
+.boton__link--neutro * {
+    color: var(--neutro600);
+}
+
+/*AUXILIAR 02 - GUINDA*/
+/*relleno*/
+.boton__aux02,
+.boton__aux02:focus {
+    background: var(--aux02);
+    border-color: var(--aux02)
+}
+
+.boton__aux02:hover {
+    background: var(--aux02Dark)
+}
+
+.boton__aux02:active {
+    background: var(--aux02Light)
+}
+
+/*relleno deshabilitado*/
+.boton__aux02--disabled,
+.boton__aux02:disabled,
+.boton__aux02--disabled:hover,
+.boton__aux02:disabled:hover {
+    background: #CCC;
+    border-color: #CCC;
+    color: #555;
+}
+
+[class^="boton__aux02"],
+[class^="boton__aux02"]:hover,
+[class^="boton__aux02"]:active,
+[class^="boton__aux02"]:focus {
+    color: #FFF
+}
+
+/*borde*/
+.boton__aux02--borde,
+.boton__aux02--borde:focus {
+    color: var(--aux02);
+    border-color: var(--aux02);
+    background: #FFF;
+}
+
+.boton__aux02--borde:hover {
+    color: #FFF;
+    background: var(--aux02);
+}
+
+.boton__aux02--borde:active {
+    color: #FFF;
+    background: var(--aux02Light);
+}
+
+/*borde deshabilitado*/
+.boton__aux02--borde--disabled,
+.boton__aux02--borde--disabled:hover,
+.boton__aux02--borde--disabled:focus,
+.boton__aux02--borde[disabled],
+.boton__aux02--borde[disabled]:hover,
+.boton__aux02--borde[disabled]:focus {
+    border-color: var(--aux02Light);
+    color: var(--aux02Light);
+    background: #FFF;
+}
+
+/*Llave MX*/
+.boton__llavemx {
+    border-radius: .75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    column-gap: .75rem;
+    padding: 0.5625rem 1rem .5rem 1rem;
+}
+
+.boton__llavemx img {
+    height: 1.1rem;
+}
+
+.boton__sesion {
+    color: #FFF;
+    font-weight: 600;
+}
+
+.boton__sesion:hover {
+    box-shadow: 0px 0px 5rem rgba(0, 0, 0, 0.4) inset;
+    background: none;
+}
+
+.boton__sesion img {
+    height: 25px;
+}
+
+/*Atras Top = history.go -)*/
+.boton__atrasTop {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/*BOTONERA*/
+[class^="botonera"] {
+    cursor: initial;
+    padding: 1.5rem 0 0 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 0;
+    width: 100%;
+}
+
+[class^="botonera"]>div {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.modal [class^="botonera"]>div {
+    gap: .5rem;
+}
+
+.botonera__txt {
+    color: var(--neutro600);
+    text-align: left;
+    justify-content: start;
+}
+
+.botonera--between {
+    justify-content: space-between;
+}
+
+.botonera--center {
+    justify-content: center;
+}
+
+.botonera--der {
+    justify-content: flex-end;
+}
+
+.botonera--izq {
+    justify-content: flex-start;
+}
+
+.botonera--borde {
+    border-top: solid 1px var(--neutro400);
+}
+
+.botonera--wrap {
+    flex-wrap: wrap;
+}
+
+[class^="botonera"]:hover {
+    background: none;
+}
+
+@media (max-width:500px) {
+    .botonera--responsiva {
+        flex-direction: column;
+        flex-wrap: wrap
+    }
+
+    .botonera--responsiva div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .boton--1 {
+        order: 1;
+    }
+
+    .boton--2 {
+        order: 2;
+    }
+
+    .boton--3 {
+        order: 3;
+    }
+
+    .boton--4 {
+        order: 4;
+    }
+
+    .boton--5 {
+        order: 5;
+    }
+
+    div.botonera__txt {
+        align-items: flex-start
+    }
+}
+
+/* SEMAFORO */
+.semaforo {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid var(--neutro500);
+    display: inline-block;
+}
+
+.semaforo.verde {
+    background: var(--verde)
+}
+
+.semaforo.rojo {
+    background: var(--rojo);
+}
+
+.semaforo.amarillo {
+    background: var(--Amarillo);
+}
+
+/*movil*/
+@media (max-width:767.9px) {
+    .boton--100sm {
+        width: 100%;
+    }
+
+    .boton--ancho {
+        padding: .5rem 3rem;
+    }
+
+    .semaforo {
+        width: .5rem;
+        height: .5rem;
+        border: none;
+    }
+}

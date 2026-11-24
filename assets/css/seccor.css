@@ -1,0 +1,27 @@
+@import "base/_normalize.css";
+@import "base/_config.css";
+@import "base/_layout.css";
+@import "base/_reticula.css";
+@import "base/_filas-columnas.css";
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
+@import "componentes/_aviso.css";
+@import "componentes/_boton.css";
+@import "componentes/_details.css";
+@import "componentes/_forms.css";
+@import "componentes/_modal.css";
+@import "componentes/_paginacion.css";
+@import "componentes/_pestanas.css";
+@import "componentes/_progresos.css";
+@import "componentes/_ruta.css";
+@import "componentes/_tablas.css";
+@import "componentes/_tooltip.css";
+
+@import "paginas/_pag_general.css";
+@import "paginas/_pag_login.css";
+@import "paginas/_pag_proyectos.css";
+@import "paginas/_pag_formularios.css";
+@import "paginas/_pag_menuAdmon.css";
+
+@import "componentes/_version-impresa.css" print;

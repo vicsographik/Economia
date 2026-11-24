@@ -1,0 +1,167 @@
+/*Cebrado*/
+@media (min-width:1150px) {
+.tabla--cebrada tbody tr:nth-child(odd) { background-color:var(--neutro300);}
+.tabla--cebrada tbody tr:nth-child(even) { background-color:#FFF;}
+.tabla--cebrada .tabla02__tbodyTh,
+.tabla--cebrada .tabla02__tbodyTd { background:none; border-bottom:solid 1px var(--neutro400);}
+}
+
+/*section y botonera*/
+.tabla__section { margin-top:3.25rem;}
+.tabla__section table {  max-width:100%; width:100%;}
+.tabla__consulta { margin-top:1.25rem; margin-bottom: 5rem;}
+/*alineación*/
+.td--center, .th--center  { text-align:center;}
+.th--center div { justify-content: center;}
+.td--right, .th--right { text-align:right;}
+td .pildora { width:100%;} 
+
+/*botón ordenar*/
+.tabla__ordenar { border:none; background:none; display:flex; flex-direction:column; font-size:0.75rem; color: var(--primario600); font-weight:600; padding:0; }
+
+/*TABLA 01*/
+.tabla02  { border-collapse:separate; border-spacing: 0; border:0px solid #AAA; width: 100%;}
+
+.tabla-autonumerada {
+  counter-reset: fila-contador;
+}
+.tabla-autonumerada tbody tr {
+  counter-increment: fila-contador;
+}
+.tabla-autonumerada tbody td:first-child::before {
+  content: counter(fila-contador) "- ";
+  color: var(--neutro800);
+}
+
+/*Tabla ancha: para tablas con muchas columnas que no deben comprimirse.
+Se usa junto con el contenedor .tabla__scrollX para permitir scroll horizontal
+sin afectar el resto de las tablas .tabla02 del proyecto.*/
+.tabla__scrollX { overflow-x:auto; cursor:grab; }
+.tabla__scrollX--arrastrando { cursor:grabbing; user-select:none; }
+.tabla__section table.tabla02--ancha { width:auto; min-width:100%; max-width:none;}
+.tabla02--ancha .tabla02__theadTh,
+.tabla02--ancha .tabla02__theadTh1,
+.tabla02--ancha .tabla02__tbodyTh,
+.tabla02--ancha .tabla02__tbodyTd { white-space:nowrap;}
+.tabla__scrollX th:last-child { min-width: 7rem;}
+
+/*Columna fija: la primera columna permanece visible mientras el resto de la tabla se arrastra*/
+.tabla02--ancha thead th:first-child { position:sticky; left:0; z-index:3;}
+.tabla02--ancha .tabla02__tbodyTh {
+    position:sticky;
+    left:0;
+    z-index:1;
+    background-color:#FFF;
+    box-shadow:2px 0 6px rgba(0, 0, 0, .1);
+}
+@media (min-width:1150px) {
+    .tabla02--ancha.tabla--cebrada tbody tr:nth-child(odd) .tabla02__tbodyTh { background-color:var(--neutro300);}
+    .tabla02--ancha.tabla--cebrada tbody tr:nth-child(even) .tabla02__tbodyTh { background-color:#FFF;}
+}
+.tabla02__caption { font-size:1rem; font-weight:600; color:var(--neutro800); caption-side:top}
+.inversion .tabla02__theadTh:first-child { width: 1%; min-width: 1%;}
+.inversion .tabla02__theadTh:nth-child(2) { min-width: 10rem;}
+.inversion .tabla02__theadTh:last-child { border-top-right-radius:.5rem;}
+.tabla02__theadTh { background:var(--primario500); color:#FFF; font-size:0.875rem; font-weight:600; padding:0.875rem .5rem; vertical-align:middle;}
+.tabla02__theadTh1 { background:var(--primario500); color:#FFF; font-size:0.875rem; font-weight:600; padding:0.875rem .5rem; vertical-align:middle;}
+.tabla02__theadTh div { display:flex; align-items:center; column-gap:.2rem; }
+.tabla02__tbodyTh,
+.tabla02__tbodyTd { padding:.5rem; background:#FFF; font-weight:normal; vertical-align:middle; font-weight:300;}
+.tabla02__tbodyTh { font-weight:bold;}
+.tabla02__checkbox { min-width:1.5rem; }
+.tabla02__checkbox label { justify-content:center;}
+.tabla02__acciones { display:flex; gap:.7rem; justify-content:center;}
+.tabla02__acciones [class*="boton"] span { display:none;}
+
+/*EXTRA*/
+.tabla02__tbodyTd .bi-flag-fill { color: red; font-size: 1.2em; padding: 0 .5rem;}
+.tabla02__tbodyTd strong { font-weight: 600;}
+.nr { background-color: var(--neutro800); color: var(--neutro100); width: 1em; height: 1em; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: .8em; padding: 0.8em;}
+.row-error td { background: var(--errorBg) !important;}
+
+/*RESPONSIVO*/
+.tablaResponsiva--horizontal {overflow-x:auto; padding-bottom:3rem; position:relative; width:100%; scrollbar-color:var(--primario600) #EEE; scrollbar-width: thin;}
+.tablaResponsiva--horizontal table { border-collapse:separate; border-spacing:0; width:100%}
+.tablaResponsiva--horizontal .tabla02__caption { position:sticky; left:0}
+.tablaResponsiva__colFija {position: sticky; left: 0;}
+.colFija--sombreado { box-shadow:3px 0px 3px rgba(0, 0, 0, 0.25);}
+.tabla02--checkbox tr .tablaResponsiva__colFija:last-of-type,
+.tabla02__checkbox + th {left: 1.5rem}
+
+
+/*TABLA 01 gris*/
+.tabla02--gris .tabla02__theadTh { background:var(--neutro400); color:var(--neutro800)}
+
+/*EXTRA TABLA Y META-ELEMENTOS*/
+.fila--upperTable p {
+    margin-bottom: 0;
+}
+.tabla--cebrada .rechazado td, .tabla--cebrada .danger td {
+    background: #EFDFDE;
+}
+.rechazoRev {
+    width: 15px;
+    height: 15px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    font-size: .8em;
+    top: -4px;
+    right: -4px;
+    position: absolute;
+}
+
+@media (max-width:650px) {
+    .tabla__botonera { margin-top:1.5rem; flex-direction:column; row-gap:1rem; align-items:start;}
+    .tabla__botonera button, .tabla__botonera a { flex-grow:1;}
+}
+
+/*PUNTAJE*/
+.puntaje {
+    border-top: 1px solid var(--neutro400);
+}
+.puntaje th, .puntaje td {
+    text-align: left;
+    padding: .5rem .5rem 0;
+}
+.user-detail {
+    border: none;
+    background: transparent;
+}
+/*CARD*/
+@media (max-width:1150px) {
+    .tabla02 { text-align: center;}
+    .tabla02__thead { display:none; row-gap:1rem;}
+    .tabla02__tbodyTr { display:flex; flex-direction:row; flex-wrap:wrap; border-radius:.5rem; border:solid 1px var(--neutro400); margin-bottom:1.5rem;}
+    .tabla02__tbodyTh,
+    .tabla02__tbodyTd { padding:.5rem; border-bottom:solid 1px var(--neutro400); width: 100%; text-align: left;}
+    
+    /*La etiqueta de cada celda se toma del encabezado real de su columna
+    (atributo data-label agregado por assets/js/tabla-etiquetas-responsivas.js),
+    en vez de un texto fijo por clase que se puede desincronizar del <th>.*/
+    .tabla02__tbodyTd[data-label]:before {
+        content: attr(data-label);
+        font-size:1rem; font-weight:bold; display:block;
+    }
+
+    .tblProy__sec { width:100%; font-weight:400; /*background:var(--neutro300);*/border-radius:.5rem .5rem 0 0;}
+    .tblProy__nom { width:100%; font-weight:400;  /*background:var(--neutro200);*/}
+    .tblProy__per { width:100%;}
+    .tblProy__tip,
+    .tblProy__edo,
+    .tblProy__emp,
+    .tblProy__inv,
+    .tblProy__ava,
+    .tblProy__est { width:50%;}
+    .tblProy__acc { width:100%; border-bottom:none; border-radius:.5rem;  text-align: start;}
+    
+    .tblProy__ava [class^="progresoAro--"] { margin:auto; }
+    .tabla02__acciones { flex-direction:column; }
+    .tabla02__acciones [class*="boton"] {  display:flex; justify-content:start;  margin:auto auto auto 0; padding:.5rem .75rem; position:relative; min-width:unset; }
+    .tabla02__acciones [class*="boton"] span { display:inline-block; font-weight:600; position:absolute; left:3rem;}
+    .tabla02__acciones [class*="tooltip"]:hover:before,
+    .tabla02__acciones [class*="tooltip"]:hover:after { content:none;}
+    .tabla02__acciones .boton__primario--borde:hover span{ color:var(--primario600); }
+    .tabla02__tbodyTr .tabla02__tbodyTd:first-child, .tabla02__tbodyTr td:first-child { background-color: var(--neutro400); border-top-left-radius: .4rem; border-top-right-radius: .4rem; font-weight: 600; width: 100%; padding: .5rem; text-align: left;}
+    .tabla--cebrada .tabla02__tbodyTd { width: 100%; text-align: left;}
+}

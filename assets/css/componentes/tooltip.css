@@ -1,0 +1,37 @@
+/* Tooltip personalizado con transición suave */
+.custom-tooltip {
+    font-family: 'Avenir', sans-serif;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    z-index: 10000;
+    min-width: 170px;
+    max-width: 170px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    line-height: 1.6;
+    text-align: center;
+    
+    /* Transición suave */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.custom-tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.custom-tooltip strong {
+    display: block;
+    font-size: 14px;
+}
+
+.custom-tooltip em {
+    display: block;
+    color: #000000;
+}

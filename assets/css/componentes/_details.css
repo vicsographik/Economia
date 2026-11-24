@@ -1,0 +1,8 @@
+.details__details { scrollbar-width:thin}
+.details__summary { cursor:pointer; display:flex;  }
+.details__tit     { line-height:normal; }
+.details__gatillo {transition:all 0.5s;}
+
+/*OPEN*/
+.details__details[open] .details__gatillo { transform: rotate(-180deg);}
+.details__details[open] { scrollbar-width:thin}

@@ -1,0 +1,29 @@
+
+.paginacion { list-style-type:none; margin:2rem 0 0 0; padding:0; display:flex; align-items:center; column-gap:.5rem; justify-content:center; flex-wrap: wrap; }
+.paginacion__anterior,
+.paginacion__siguiente { font-weight:600; display:flex; align-items:center; column-gap:.5rem;  position: relative;}
+.paginacion__anterior:before,
+.paginacion__siguiente:before { content:""; position:absolute; display:block; width:.65rem; height:.65rem;  border:var(--primario600) 0.1rem solid; transform: rotate(45deg); top:0.45rem;}
+.paginacion__anterior:before  { border-right-color:transparent; border-top-color:transparent; left:-1rem;}
+.paginacion__siguiente:before { border-left-color:transparent; border-bottom-color:transparent; right:-1rem;}
+
+.paginacion__pag { border-radius:5rem; text-decoration:none; width:1.875rem; height:1.875rem; display:flex; align-items:center; justify-content:center; font-weight:500; color:var(--neutro800); }
+.paginacion__pag:hover { background:#DDD; color:initial; font-weight:600;}
+.paginacion__pag--sel,
+.paginacion__pag--sel:focus,
+.paginacion__pag--sel:hover  { background:var(--primario500); color:#FFF; font-weight:600;}
+
+/*relleno*/
+.paginacion--relleno { background:var(--primario500); border-radius:0 0 .5rem .5rem; padding:1.25rem 1rem; justify-content:end; margin-top: 0;}
+.paginacion--relleno .paginacion__anterior:before,
+.paginacion--relleno .paginacion__siguiente:before { content:none;}
+.paginacion--relleno .paginacion__anterior,
+.paginacion--relleno .paginacion__siguiente { text-decoration:none; color:#FFF; font-weight:400;}
+.paginacion--relleno .paginacion__anterior, .paginacion--relleno .paginacion__siguiente.disabled { color: rgba(255, 255, 255, 0.5); }
+.paginacion__pag { border-radius:.25rem; text-decoration:none; width:1.875rem; height:1.875rem; display:flex; align-items:center; justify-content:center; font-weight:400; color:#FFF; background:rgba(0, 0, 0, 0.05);}
+.paginacion--relleno .paginacion__pag--sel,
+.paginacion--relleno .paginacion__pag--sel:focus,
+.paginacion--relleno .paginacion__pag--sel:hover  { background:var(--primario600); color:#FFF; font-weight:600;}
+@media (max-width:899px) {
+    .paginacion--relleno { border-radius:.5rem; justify-content:center;} 
+}
